@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="483450d0-41b9-46a6-bb09-c960a9aa3bf6" name="Changes" comment="-first" />
+    <list default="true" id="483450d0-41b9-46a6-bb09-c960a9aa3bf6" name="Changes" comment="-first">
+      <change afterPath="$PROJECT_DIR$/src/Auteur.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CD.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DVD.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Lecteur.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Livre.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TypeLivre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TypeOuvrage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TypeOuvrage.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -54,6 +63,7 @@
       <updated>1675328787089</updated>
       <workItem from="1675328788515" duration="746000" />
       <workItem from="1675782520416" duration="125000" />
+      <workItem from="1675783661587" duration="3210000" />
     </task>
     <task id="LOCAL-00001" summary="-first">
       <created>1675782602313</created>

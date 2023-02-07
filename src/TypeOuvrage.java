@@ -1,5 +1,6 @@
-public enum Ouvrage
+enum TypeOuvrage
 {
     LIVRE,
-    CD,DVD
+    CD,
+    DVD
 }
