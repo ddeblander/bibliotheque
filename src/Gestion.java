@@ -11,6 +11,7 @@ public class Gestion
         a1.getLouvrage().add(l1);
 
         a1.addOuvrage(l1);
+        a1.suppOuvrage(l1);
 
         Rayon r1 = new Rayon("42", l1.getGenre());
         Exemplaire ex1= new Exemplaire("45613A","Open",l1);
