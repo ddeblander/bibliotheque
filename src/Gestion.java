@@ -10,6 +10,8 @@ public class Gestion
         l1.addLauteurs(a1);
         a1.getLouvrage().add(l1);
 
+        a1.addOuvrage(l1);
+
         Rayon r1 = new Rayon("42", l1.getGenre());
         Exemplaire ex1= new Exemplaire("45613A","Open",l1);
         ex1.setRayon(r1);

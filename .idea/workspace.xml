@@ -4,21 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="483450d0-41b9-46a6-bb09-c960a9aa3bf6" name="Changes" comment="-ouvrage fixed">
-      <change afterPath="$PROJECT_DIR$/src/Exemplaire.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Gestion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Location.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Mail.java" afterDir="false" />
+    <list default="true" id="483450d0-41b9-46a6-bb09-c960a9aa3bf6" name="Changes" comment="-add solution">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Auteur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Auteur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DVD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DVD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lecteur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lecteur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Livre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Livre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ouvrage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ouvrage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rayon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rayon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TypeLivre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TypeLivre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TypeOuvrage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TypeOuvrage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gestion.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +82,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675928193144</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="-add solution">
+      <created>1675934367300</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1675934367300</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,6 +109,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="-first" />
     <MESSAGE value="-ouvrage fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="-ouvrage fixed" />
+    <MESSAGE value="-add solution" />
+    <option name="LAST_COMMIT_MESSAGE" value="-add solution" />
   </component>
 </project>
