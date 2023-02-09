@@ -5,7 +5,7 @@ abstract class Ouvrage
     protected String titre;
     protected byte ageMin;
     protected LocalDate dateParution;
-    protected TypeOuvr typeOuvrage;
+    protected TypeOuvrage typeOuvrage;
     protected double prixLocation;
     protected String langue,genre;
 
