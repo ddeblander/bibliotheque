@@ -1,8 +1,3 @@
-public enum TypeLivre
-{
-    ROMAN,
-    NOUVELLE,
-    ESSAI,
-    DOCUMENTAIRE,
-    BIOGRAPHIE
+public enum TypeLivre {
+    ROMAN,NOUVELLE,ESSAI,DOCUMENTAIRE,BIOGRAPHIE;
 }

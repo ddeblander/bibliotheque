@@ -4,8 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="483450d0-41b9-46a6-bb09-c960a9aa3bf6" name="Changes" comment="-first">
+    <list default="true" id="483450d0-41b9-46a6-bb09-c960a9aa3bf6" name="Changes" comment="-ouvrage fixed">
+      <change afterPath="$PROJECT_DIR$/src/Exemplaire.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Gestion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Location.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Mail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Auteur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Auteur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DVD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DVD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lecteur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lecteur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Livre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Livre.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ouvrage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ouvrage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Rayon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rayon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TypeLivre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TypeLivre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TypeOuvrage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TypeOuvrage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,18 +47,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/deblander/IdeaProjects/bibliotheque/src",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -65,7 +87,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675782602313</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="-ouvrage fixed">
+      <created>1675928193144</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1675928193144</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -84,6 +113,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="-first" />
-    <option name="LAST_COMMIT_MESSAGE" value="-first" />
+    <MESSAGE value="-ouvrage fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="-ouvrage fixed" />
   </component>
 </project>
