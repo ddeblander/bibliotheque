@@ -45,6 +45,18 @@ public class Auteur {
         this.louvrage = louvrage;
     }
 
+    public void addOuvrage(Livre o)
+    {
+        louvrage.add(o);
+    }
+    public void suppOuvrage(Livre o)
+    {
+        louvrage.remove(o);
+    }
+
+
+
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
