@@ -45,9 +45,11 @@ public class Auteur {
         this.louvrage = louvrage;
     }
 
-    public void addOuvrage(Livre o)
+    public void addOuvrage(Ouvrage o)
     {
         louvrage.add(o);
+        o.addLauteurs(this);
+
     }
     public void suppOuvrage(Livre o)
     {

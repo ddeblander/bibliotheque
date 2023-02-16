@@ -14,11 +14,13 @@ public class Exemplaire {
 
 
     public Exemplaire(String matricule, String descriptionEtat,Ouvrage ouvrage) {
+        rayon=null;
         this.matricule = matricule;
         this.descriptionEtat=descriptionEtat;
         this.ouvrage = ouvrage;
-        this.ouvrage.getLex().add(this);
+        //this.ouvrage.getLex().add(this);
         lloc= new ArrayList<>();
+
     }
 
     @Override

@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="483450d0-41b9-46a6-bb09-c960a9aa3bf6" name="Changes" comment="-add base Gestion to be completed">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Auteur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Auteur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DVD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DVD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exemplaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exemplaire.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gestion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Rayon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rayon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,19 +42,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/deblander/IdeaProjects2EME/bibliotheque",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
@@ -55,6 +55,20 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Gestion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Gestion" />
+      <module name="bibliotheque" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Gestion" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -114,6 +128,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="-first" />
@@ -121,5 +136,9 @@
     <MESSAGE value="-add solution" />
     <MESSAGE value="-add base Gestion to be completed" />
     <option name="LAST_COMMIT_MESSAGE" value="-add base Gestion to be completed" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
