@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="483450d0-41b9-46a6-bb09-c960a9aa3bf6" name="Changes" comment="-add function add, delete in Auteur,Rayon,Exemplaire&#10;-modified CD,DVD to add automatocally the TYPEOUVRAGE">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="483450d0-41b9-46a6-bb09-c960a9aa3bf6" name="Changes" comment="-add TODO">
       <change beforePath="$PROJECT_DIR$/src/Gestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gestion.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -112,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676538116966</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="-add TODO">
+      <created>1676538561510</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1676538561510</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,7 +142,8 @@
     <MESSAGE value="-add solution" />
     <MESSAGE value="-add base Gestion to be completed" />
     <MESSAGE value="-add function add, delete in Auteur,Rayon,Exemplaire&#10;-modified CD,DVD to add automatocally the TYPEOUVRAGE" />
-    <option name="LAST_COMMIT_MESSAGE" value="-add function add, delete in Auteur,Rayon,Exemplaire&#10;-modified CD,DVD to add automatocally the TYPEOUVRAGE" />
+    <MESSAGE value="-add TODO" />
+    <option name="LAST_COMMIT_MESSAGE" value="-add TODO" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

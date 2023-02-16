@@ -16,10 +16,14 @@ public class Gestion
             {
                 case 1 : gestAuteurs();
                          break;
-                case 2 : gestOuvrage;
+                case 2 : gestOuvrages();
                          break;
             }
         }while(choix !=8);
+
+
+
+
         //TODO ajouter les methodes UML
         //TODO ajouter add automatique
         //TODO ajouter les gestion au dessus d'ici
@@ -29,6 +33,40 @@ public class Gestion
 
 
     }
+    private static void gestOuvrages()
+    {
+        //TODO voir note en dessous de l'UML
+    }
+    private static void gestAuteurs()
+    {
+
+    }
+    private static void gestLecteurs()
+    {
+
+    }
+    private static void gestRayons()
+    {
+
+    }
+    private static void gestExemplaires()
+    {
+
+    }
+    private static void louer()
+    {
+
+    }
+    private static void rendre()
+    {
+
+    }
+    private static void exit()
+    {
+
+    }
+
+
     private static void populate()
     {
         Auteur a1= new Auteur("Kenoby  ","Jean","Belgique");
