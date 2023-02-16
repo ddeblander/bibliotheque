@@ -1,10 +1,31 @@
 import java.time.LocalDate;
+import java.util.Scanner;
 
 public class Gestion
 {
     public static void main(String[] args)
     {
         populate();
+        Scanner sc= new Scanner(System.in);
+        int choix;
+        do{
+            System.out.println("1.auteur,2.ouvrage etc... 8.fin");
+            choix=sc.nextInt();
+
+            switch(choix)
+            {
+                case 1 : gestAuteurs();
+                         break;
+                case 2 : gestOuvrage;
+                         break;
+            }
+        }while(choix !=8);
+        //TODO ajouter les methodes UML
+        //TODO ajouter add automatique
+        //TODO ajouter les gestion au dessus d'ici
+
+
+
 
 
     }

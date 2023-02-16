@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="483450d0-41b9-46a6-bb09-c960a9aa3bf6" name="Changes" comment="-add base Gestion to be completed">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+    <list default="true" id="483450d0-41b9-46a6-bb09-c960a9aa3bf6" name="Changes" comment="-add function add, delete in Auteur,Rayon,Exemplaire&#10;-modified CD,DVD to add automatocally the TYPEOUVRAGE">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Auteur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Auteur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DVD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DVD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exemplaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exemplaire.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Gestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gestion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rayon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rayon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675934508029</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="-add function add, delete in Auteur,Rayon,Exemplaire&#10;-modified CD,DVD to add automatocally the TYPEOUVRAGE">
+      <created>1676538116966</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1676538116966</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,7 +135,8 @@
     <MESSAGE value="-ouvrage fixed" />
     <MESSAGE value="-add solution" />
     <MESSAGE value="-add base Gestion to be completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="-add base Gestion to be completed" />
+    <MESSAGE value="-add function add, delete in Auteur,Rayon,Exemplaire&#10;-modified CD,DVD to add automatocally the TYPEOUVRAGE" />
+    <option name="LAST_COMMIT_MESSAGE" value="-add function add, delete in Auteur,Rayon,Exemplaire&#10;-modified CD,DVD to add automatocally the TYPEOUVRAGE" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
