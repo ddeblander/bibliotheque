@@ -86,7 +86,8 @@ public class Gestion
     }
     private static void exit()
     {
-
+        System.out.println("merci d'avoir utilisé notre programme.");
+        System.out.println("Bonne journée.");
     }
 
 
