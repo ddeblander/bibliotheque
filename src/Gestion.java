@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class Gestion
 {
+    private static String erreur="mauvaise valeur introduite";
     public static void main(String[] args)
     {
         populate();
@@ -40,7 +41,7 @@ public class Gestion
                 case 8 : exit();
                         break;
                 default:
-                    System.out.println("mauvaise valeur introduite ");
+                    System.out.println(erreur);
             }
         }while(choix !=8);
 
@@ -58,27 +59,135 @@ public class Gestion
     }
     private static void gestOuvrages()
     {
-        //TODO voir note en dessous de l'UML
+        short choice=selectionCRUD();
+        if(choice==1)
+        {
+            System.out.println("1");
+        }
+        else if(choice==2)
+        {
+            System.out.println("2");
+        }
+        else if(choice==3)
+        {
+            System.out.println("3");
+
+        }
+        else
+        {
+            System.out.println("4");
+
+        }
     }
     private static void gestAuteurs()
     {
+        short choice=selectionCRUD();
+        if(choice==1)
+        {
+            System.out.println("1");
+        }
+        else if(choice==2)
+        {
+            System.out.println("2");
+        }
+        else if(choice==3)
+        {
+            System.out.println("3");
 
+        }
+        else
+        {
+            System.out.println("4");
+
+        }
     }
     private static void gestLecteurs()
     {
+        short choice=selectionCRUD();
+        if(choice==1)
+        {
+            System.out.println("1");
+        }
+        else if(choice==2)
+        {
+            System.out.println("2");
+        }
+        else if(choice==3)
+        {
+            System.out.println("3");
 
+        }
+        else
+        {
+            System.out.println("4");
+
+        }
     }
     private static void gestRayons()
     {
+        short choice=selectionCRUD();
+        if(choice==1)
+        {
+            System.out.println("1");
+        }
+        else if(choice==2)
+        {
+            System.out.println("2");
+        }
+        else if(choice==3)
+        {
+            System.out.println("3");
 
+        }
+        else
+        {
+            System.out.println("4");
+
+        }
     }
     private static void gestExemplaires()
     {
+        short choice=selectionCRUD();
+        if(choice==1)
+        {
+            System.out.println("1");
+        }
+        else if(choice==2)
+        {
+            System.out.println("2");
+        }
+        else if(choice==3)
+        {
+            System.out.println("3");
 
+        }
+        else
+        {
+            System.out.println("4");
+
+        }
     }
     private static void louer()
     {
+        short choice=selectionCRUD();
+        if(choice==1)
+        {
+            System.out.println("1");
+        }
+        else if(choice==2)
+        {
+            System.out.println("2");
+        }
+        else if(choice==3)
+        {
+            System.out.println("3");
 
+        }
+        else
+        {
+            System.out.println("4");
+
+        }
     }
     private static void rendre()
     {
@@ -88,6 +197,31 @@ public class Gestion
     {
         System.out.println("merci d'avoir utilisé notre programme.");
         System.out.println("Bonne journée.");
+    }
+    private static short selectionCRUD()
+    {
+        int choiceCRUD=0;
+        Scanner scCRUD = new Scanner(System.in);
+        System.out.println("1.Ajout,2.Lire,3.Update,4.Delete ");
+
+        try
+        {
+            choiceCRUD= scCRUD.nextInt();
+
+        }catch(Exception e)
+        {
+            System.out.println(e.toString());
+        }
+        switch(choiceCRUD)
+        {
+            case 1 : return 1;
+            case 2 : return 2;
+            case 3 : return 3;
+            case 4 : return 4;
+            default:
+                System.out.println(erreur);
+                return selectionCRUD();
+        }
     }
 
 
