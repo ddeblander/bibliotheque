@@ -7,10 +7,19 @@ public class Gestion
     {
         populate();
         Scanner sc= new Scanner(System.in);
-        int choix;
+        int choix=0;
+        System.out.println("1.auteur,2.ouvrage etc... 8.fin");
         do{
-            System.out.println("1.auteur,2.ouvrage etc... 8.fin");
-            choix=sc.nextInt();
+
+            try
+            {
+                choix=sc.nextInt();
+            }catch(Exception e)
+            {
+                System.out.println(e.toString());
+                sc.nextLine();
+            }
+
 
             switch(choix)
             {
@@ -18,6 +27,20 @@ public class Gestion
                          break;
                 case 2 : gestOuvrages();
                          break;
+                case 3 : gestLecteurs();
+                        break;
+                case 4 : gestRayons();
+                        break;
+                case 5 : gestExemplaires();
+                        break;
+                case 6 : louer();
+                        break;
+                case 7 : rendre();
+                        break;
+                case 8 : exit();
+                        break;
+                default:
+                    System.out.println("mauvaise valeur introduite ");
             }
         }while(choix !=8);
 
