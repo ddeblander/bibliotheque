@@ -1,3 +1,5 @@
+package metier;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -74,7 +76,7 @@ public class Auteur {
 
     @Override
     public String toString() {
-        return "Auteur{" +
+        return "metier.Auteur{" +
                 "nom='" + nom + '\'' +
                 ", prenom='" + prenom + '\'' +
                 ", nationalite='" + nationalite + '\'' +

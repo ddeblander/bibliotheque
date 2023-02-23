@@ -1,3 +1,5 @@
+package metier;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -80,7 +82,7 @@ public class Exemplaire {
 
     @Override
     public String toString() {
-        return "Exemplaire{" +
+        return "metier.Exemplaire{" +
                 "matricule='" + matricule + '\'' +
                 ", descriptionEtat='" + descriptionEtat + '\'' +
                 ", ouvrage=" + ouvrage +

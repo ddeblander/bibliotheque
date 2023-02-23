@@ -1,3 +1,5 @@
+package metier;
+
 public class Mail {
     private String objet;
     private String message;
@@ -35,7 +37,7 @@ public class Mail {
 
     @Override
     public String toString() {
-        return "Mail{" +
+        return "metier.Mail{" +
                 "objet='" + objet + '\'' +
                 ", message='" + message + '\'' +
                 ", dateEnvoi='" + dateEnvoi + '\'' +

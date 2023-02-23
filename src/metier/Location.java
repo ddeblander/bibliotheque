@@ -1,3 +1,5 @@
+package metier;
+
 import java.time.LocalDate;
 import java.util.Objects;
 
@@ -66,7 +68,7 @@ public class Location {
 
     @Override
     public String toString() {
-        return "Location{" +
+        return "metier.Location{" +
                 "dateLocation=" + dateLocation +
                 ", dateRestitution=" + dateRestitution +
                 ", loueur=" + loueur +

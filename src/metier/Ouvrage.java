@@ -1,3 +1,5 @@
+package metier;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -109,7 +111,7 @@ public abstract class Ouvrage {
 
     @Override
     public String toString() {
-        return "Ouvrage{" +
+        return "metier.Ouvrage{" +
                 "titre='" + titre + '\'' +
                 ", ageMin=" + ageMin +
                 ", dateParution=" + dateParution +

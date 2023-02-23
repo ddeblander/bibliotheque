@@ -1,3 +1,5 @@
+package metier;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +29,7 @@ public class Rayon {
 
     @Override
     public String toString() {
-        return "Rayon{" +
+        return "metier.Rayon{" +
                 "codeRayon='" + codeRayon + '\'' +
                 ", genre='" + genre + '\'' +
                 '}';

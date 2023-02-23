@@ -1,3 +1,5 @@
+package metier;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -100,7 +102,7 @@ public class Lecteur {
 
     @Override
     public String toString() {
-        return "Lecteur{" +
+        return "metier.Lecteur{" +
                 "numlecteur=" + numlecteur +
                 ", nom='" + nom + '\'' +
                 ", prenom='" + prenom + '\'' +

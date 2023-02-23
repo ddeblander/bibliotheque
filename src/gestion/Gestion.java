@@ -1,3 +1,7 @@
+package gestion;
+
+import metier.*;
+
 import java.time.LocalDate;
 import java.util.Scanner;
 

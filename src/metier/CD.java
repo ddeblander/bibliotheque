@@ -1,3 +1,5 @@
+package metier;
+
 import java.time.LocalDate;
 import java.util.Objects;
 
@@ -52,7 +54,7 @@ public class CD extends Ouvrage{
 
     @Override
     public String toString() {
-        return super.toString()+"CD{" +
+        return super.toString()+"metier.CD{" +
                 "code=" + code +
                 ", nbrePlages=" + nbrePlages +
                 ", dureeTotale='" + dureeTotale + '\'' +

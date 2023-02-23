@@ -1,3 +1,5 @@
+package metier;
+
 import java.time.LocalDate;
 import java.util.Objects;
 
@@ -63,7 +65,7 @@ public class Livre extends Ouvrage{
 
     @Override
     public String toString() {
-        return super.toString()+ "Livre{" +
+        return super.toString()+ "metier.Livre{" +
                 "isbn='" + isbn + '\'' +
                 ", nbrePages=" + nbrePages +
                 ", tl=" + tl +

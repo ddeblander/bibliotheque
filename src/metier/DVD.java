@@ -1,3 +1,5 @@
+package metier;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -72,7 +74,7 @@ public class DVD extends Ouvrage{
 
     @Override
     public String toString() {
-        return super.toString()+"DVD{" +
+        return super.toString()+"metier.DVD{" +
                 "code=" + code +
                 ", dureeTotale='" + dureeTotale + '\'' +
                 ", nbreBonus=" + nbreBonus +
