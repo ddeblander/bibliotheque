@@ -11,11 +11,17 @@ public class Gestion
     public static void main(String[] args)
     {
         populate();
+        menu();
+        //TODO ajouter les methodes UML
+        //TODO ajouter add automatique
+        //TODO ajouter les gestion au dessus d'ici
+    }
+    private static void menu()
+    {
         Scanner sc= new Scanner(System.in);
         int choix=0;
         System.out.println("1.auteur,2.ouvrage etc... 8.fin");
         do{
-
             try
             {
                 choix=sc.nextInt();
@@ -24,49 +30,44 @@ public class Gestion
                 System.out.println(e.toString());
                 sc.nextLine();
             }
-
-
             switch(choix)
             {
                 case 1 : gestAuteurs();
-                         break;
+                    break;
                 case 2 : gestOuvrages();
-                         break;
+                    break;
                 case 3 : gestLecteurs();
-                        break;
+                    break;
                 case 4 : gestRayons();
-                        break;
+                    break;
                 case 5 : gestExemplaires();
-                        break;
+                    break;
                 case 6 : louer();
-                        break;
+                    break;
                 case 7 : rendre();
-                        break;
+                    break;
                 case 8 : exit();
-                        break;
+                    break;
                 default:
                     System.out.println(erreur);
             }
         }while(choix !=8);
 
-
-
-
-        //TODO ajouter les methodes UML
-        //TODO ajouter add automatique
-        //TODO ajouter les gestion au dessus d'ici
-
-
-
-
-
     }
     private static void gestOuvrages()
     {
+
+        Scanner sc = new Scanner(System.in);
+        String choicesO[]={"Titre:","age minimum:","Date de parution:","Type d'ouvrage:","Prix de location:","langue:","genre:"};
+        String choicesLivre[]={"Titre:","age minimum:","Date de parution:","Type d'ouvrage:","Prix de location:","langue:","genre:"};
+        String choicesCD[]={"Titre:","age minimum:","Date de parution:","Type d'ouvrage:","Prix de location:","langue:","genre:"};
+        String choicesDVD[]={"Titre:","age minimum:","Date de parution:","Type d'ouvrage:","Prix de location:","langue:","genre:"};
+
+        TypeOuvrage typeOuvrages[]=TypeOuvrage.values();
         short choice=selectionCRUD();
         if(choice==1)
         {
-            System.out.println("1");
+
         }
         else if(choice==2)
         {
@@ -173,6 +174,8 @@ public class Gestion
     }
     private static void louer()
     {
+        //TODO lister exemplaires,lister lecteurs,créer la location avec le constructeur à deux paramètres(loueur,exemplaire)
+
         short choice=selectionCRUD();
         if(choice==1)
         {

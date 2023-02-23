@@ -17,6 +17,14 @@ public class Livre extends Ouvrage{
         this.tl=tl;
         this.resume=resume;
     }
+    private Livre(LivreBuilder lb)
+    {
+        super(lb.o.titre, lb.o.ageMin, lb.o.dateParution, TypeOuvrage.LIVRE, lb.o.prixLocation, lb.o.langue, lb.o.genre);
+        this.isbn=lb.isbn;
+        this.nbrePages=lb.nbrePages;
+        this.tl=lb.tl;
+        this.resume=lb.resume;
+    }
 
     public String getIsbn() {
         return isbn;
@@ -71,5 +79,55 @@ public class Livre extends Ouvrage{
                 ", tl=" + tl +
                 ", resume='" + resume + '\'' +
                 "} " + super.toString();
+    }
+
+
+    public static class LivreBuilder
+    {
+        protected Ouvrage o;
+        protected String isbn;
+        protected int nbrePages;
+        protected TypeLivre tl;
+        protected String resume;
+
+        public LivreBuilder setOuvrage(Ouvrage o) {
+            if(o!=null)
+            {
+                this.o = o;
+            }
+            else
+            {
+                System.out.println("Ouvrage non définis ! ");
+            }
+
+            return this;
+        }
+        public LivreBuilder setIsbn(String isbn) {
+            this.isbn = isbn;
+            return this;
+        }
+
+        public LivreBuilder setNbrePages(int nbrePages) {
+            this.nbrePages = nbrePages;
+            return this;
+        }
+
+        public LivreBuilder setTl(TypeLivre tl) {
+            this.tl = tl;
+            return this;
+        }
+
+        public LivreBuilder setResume(String resume) {
+            this.resume = resume;
+            return this;
+        }
+        public Livre build() throws Exception
+        {
+            if(isbn!=""||nbrePages!=0||tl!=null||o!=null)
+            {
+                return new Livre(this);
+            }
+            throw new Exception("Imformation de livre non complete");
+        }
     }
 }

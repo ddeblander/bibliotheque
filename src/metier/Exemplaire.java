@@ -89,4 +89,11 @@ public class Exemplaire {
                 ", rayon=" + rayon +
                 '}';
     }
+
+    public void envoiMailLecteurActuel(Mail mail){
+        //TODO envoi mail lecteur exemplaire en println
+    }
+    public void envoiMailLecteurs(Mail mail){
+        //TODO envoi mail lecteurs exemplaire en println
+    }
 }

@@ -121,4 +121,57 @@ public abstract class Ouvrage {
                 ", genre='" + genre + '\'' +
                 '}';
     }
+
+    public static class OuvrageBuilder
+    {
+        protected String titre;
+        protected int ageMin;
+        protected LocalDate dateParution;
+        protected TypeOuvrage to;
+        protected double prixLocation;
+        protected String langue;
+        protected String genre;
+
+
+        public void setTitre(String titre) {
+            this.titre = titre;
+        }
+
+        public void setAgeMin(int ageMin) {
+            this.ageMin = ageMin;
+        }
+
+        public void setDateParution(LocalDate dateParution) {
+            this.dateParution = dateParution;
+        }
+
+        public void setTo(TypeOuvrage to) {
+            this.to = to;
+        }
+
+        public void setPrixLocation(double prixLocation) {
+            this.prixLocation = prixLocation;
+        }
+
+        public void setLangue(String langue) {
+            this.langue = langue;
+        }
+
+        public void setGenre(String genre) {
+            this.genre = genre;
+        }
+
+        public void setLauteurs(List<Auteur> lauteurs) {
+            this.lauteurs = lauteurs;
+        }
+
+        public void setLex(List<Exemplaire> lex) {
+            this.lex = lex;
+        }
+        public Ouvrage build()
+        {
+            if(titre!=""||dateParution!=null||)
+        }
+    }
+
 }
