@@ -1,36 +1,34 @@
 package gestion;
 
 import metier.*;
+import utilitaires.OuvrageFactory;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
-public class Gestion
+public class Gestion extends OuvrageFactory
 {
-    private static String erreur="mauvaise valeur introduite";
-    public static void main(String[] args)
-    {
-        populate();
-        menu();
-        //TODO ajouter les methodes UML
-        //TODO ajouter add automatique
-        //TODO ajouter les gestion au dessus d'ici
-    }
-    private static void menu()
+    private String erreur="mauvaise valeur introduite";
+    private List<Ouvrage> lo=new ArrayList<>();
+
+    private void menu()
     {
         Scanner sc= new Scanner(System.in);
         int choix=0;
         System.out.println("1.auteur,2.ouvrage etc... 8.fin");
-        do{
             try
             {
                 choix=sc.nextInt();
             }catch(Exception e)
             {
                 System.out.println(e.toString());
-                sc.nextLine();
+                sc.skip("/n");
             }
-            switch(choix)
+            lo.add(super.create());
+            //TODO continuer la solution du prof avec les factory et l'implémenter ici
+            /*switch(choix)
             {
                 case 1 : gestAuteurs();
                     break;
@@ -51,17 +49,12 @@ public class Gestion
                 default:
                     System.out.println(erreur);
             }
-        }while(choix !=8);
-
+        }while(choix !=8);*/
     }
-    private static void gestOuvrages()
+    private void gestOuvrages()
     {
-
+        super.create();
         Scanner sc = new Scanner(System.in);
-        String choicesO[]={"Titre:","age minimum:","Date de parution:","Type d'ouvrage:","Prix de location:","langue:","genre:"};
-        String choicesLivre[]={"Titre:","age minimum:","Date de parution:","Type d'ouvrage:","Prix de location:","langue:","genre:"};
-        String choicesCD[]={"Titre:","age minimum:","Date de parution:","Type d'ouvrage:","Prix de location:","langue:","genre:"};
-        String choicesDVD[]={"Titre:","age minimum:","Date de parution:","Type d'ouvrage:","Prix de location:","langue:","genre:"};
 
         TypeOuvrage typeOuvrages[]=TypeOuvrage.values();
         short choice=selectionCRUD();
@@ -84,7 +77,7 @@ public class Gestion
 
         }
     }
-    private static void gestAuteurs()
+    private void gestAuteurs()
     {
         short choice=selectionCRUD();
         if(choice==1)
@@ -106,7 +99,7 @@ public class Gestion
 
         }
     }
-    private static void gestLecteurs()
+    private void gestLecteurs()
     {
         short choice=selectionCRUD();
         if(choice==1)
@@ -128,7 +121,7 @@ public class Gestion
 
         }
     }
-    private static void gestRayons()
+    private void gestRayons()
     {
         short choice=selectionCRUD();
         if(choice==1)
@@ -150,7 +143,7 @@ public class Gestion
 
         }
     }
-    private static void gestExemplaires()
+    private void gestExemplaires()
     {
         short choice=selectionCRUD();
         if(choice==1)
@@ -172,7 +165,7 @@ public class Gestion
 
         }
     }
-    private static void louer()
+    private void louer()
     {
         //TODO lister exemplaires,lister lecteurs,créer la location avec le constructeur à deux paramètres(loueur,exemplaire)
 
@@ -196,16 +189,16 @@ public class Gestion
 
         }
     }
-    private static void rendre()
+    private void rendre()
     {
 
     }
-    private static void exit()
+    private void exit()
     {
         System.out.println("merci d'avoir utilisé notre programme.");
         System.out.println("Bonne journée.");
     }
-    private static short selectionCRUD()
+    private short selectionCRUD()
     {
         int choiceCRUD=0;
         Scanner scCRUD = new Scanner(System.in);
@@ -232,7 +225,7 @@ public class Gestion
     }
 
 
-    private static void populate()
+    private void populate()
     {
         Auteur a1= new Auteur("Kenoby  ","Jean","Belgique");
         Livre l1 = new Livre("L'avance Rapide",12, LocalDate.now(),22.0,"Fraçcais","Science-Fiction","548415-494",550,TypeLivre.DOCUMENTAIRE,"c'est l'histoire");
@@ -255,5 +248,14 @@ public class Gestion
 
         System.out.println(a1.getLouvrage().toString());
         System.out.println(l1.toString());
+    }
+    public static void main(String[] args)
+    {
+        Gestion g = new Gestion();
+        g.populate();
+        g.menu();
+        //TODO ajouter les methodes UML
+        //TODO ajouter add automatique
+        //TODO ajouter les gestion au dessus d'ici
     }
 }
