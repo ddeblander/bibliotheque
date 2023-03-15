@@ -96,4 +96,12 @@ public class Exemplaire {
     public void envoiMailLecteurs(Mail mail){
         //TODO envoi mail lecteurs exemplaire en println
     }
+
+    public boolean enLocation()
+    {
+        if(lloc.isEmpty()) return false;
+        Location l = lloc.get(lloc.size()-1);
+        if(l.getDateRestitution()==null) return true;
+        return false;
+    }
 }

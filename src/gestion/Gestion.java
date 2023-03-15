@@ -2,16 +2,25 @@ package gestion;
 
 import metier.*;
 import utilitaires.OuvrageFactory;
+import utilitaires.Utilitaire;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
 public class Gestion extends OuvrageFactory
 {
     private String erreur="mauvaise valeur introduite";
+    private List<Auteur> la = new ArrayList<>();
     private List<Ouvrage> lo=new ArrayList<>();
+    private List<Lecteur> ll = new ArrayList<>();
+    private List<Exemplaire> lex = new ArrayList<>();
+    private List<Rayon> lr= new ArrayList<>();
+    private List<Location> lloc = new ArrayList<>();
+    private List<Lecteur> llect = new ArrayList<>();
 
     private void menu()
     {
@@ -167,7 +176,7 @@ public class Gestion extends OuvrageFactory
     }
     private void louer()
     {
-        //TODO lister exemplaires,lister lecteurs,créer la location avec le constructeur à deux paramètres(loueur,exemplaire)
+
 
         short choice=selectionCRUD();
         if(choice==1)
@@ -188,10 +197,6 @@ public class Gestion extends OuvrageFactory
             System.out.println("4");
 
         }
-    }
-    private void rendre()
-    {
-
     }
     private void exit()
     {
@@ -223,27 +228,99 @@ public class Gestion extends OuvrageFactory
                 return selectionCRUD();
         }
     }
+    private void gestRestitution()
+    {
+        int i=0;
+        Scanner sc= new Scanner(System.in);
+        for(Exemplaire ex:lex)
+        {
+           System.out.println("numéro :"+i+ex.toString());
+        }
+
+
+        System.out.println("choississez l'exmplaire à rendre");
+        try
+        {
+            lloc.get(sc.nextInt()).setDateRestitution(LocalDate.now());
+
+
+        }catch(Exception e)
+        {
+            System.out.println(e.toString());
+            gestRestitution();
+        }
+    }
+    private void gestLocations() {
+        int choix;
+        choix = Utilitaire.choixListe(lex);
+        if(lex.get(choix).enLocation()){
+            System.out.println("exemplaire en location");
+            return;
+        }
+        Exemplaire ex = lex.get(choix-1);
+        choix=Utilitaire.choixListe(llect);
+        Lecteur lec = llect.get(choix-1);
+        lloc.add(new Location(lec,ex));
+    }
 
 
     private void populate()
     {
         Auteur a1= new Auteur("Kenoby  ","Jean","Belgique");
-        Livre l1 = new Livre("L'avance Rapide",12, LocalDate.now(),22.0,"Fraçcais","Science-Fiction","548415-494",550,TypeLivre.DOCUMENTAIRE,"c'est l'histoire");
+        Livre l1 = new Livre("L'avance Rapide",12, LocalDate.now(),22.0,"Fraçcais","Science-Fiction","548415-494",550,TypeLivre.DOCUMENTAIRE,"c1'est l'histoire");
         Rayon r1 = new Rayon("42", l1.getGenre());
         Exemplaire ex1= new Exemplaire("45613A","Open",l1);
         Lecteur lect1 = new Lecteur(285,"Jean","Jacques",LocalDate.MIN,"46 Grand rue ","Zbla@Yahoo.be","465541652");
         Location loc1 = new Location(LocalDate.now(),LocalDate.of(2023,3,22),lect1,ex1);
-        DVD d = new DVD("AI",12,LocalDate.of(2000,10,1),2.50,"anglais","SF",4578l,"120 min",(byte)2);
-        CD c = new CD("The Compil 2023",0,LocalDate.of(2023,1,1),2,"English","POP",1245,(byte)20,"100 min");
+        DVD d = new DVD("AI",12,LocalDate.of(2000,10,1),2.50,"anglais","SF",4578l,LocalTime.of(2,0,0),(byte)2);
+        CD c = new CD("The Compil 2023",0,LocalDate.of(2023,1,1),2,"English","POP",1245,(byte)20, LocalTime.of(1,40,0));
+
+        la.add(a1);
+        lo.add(l1);
+        d.addAutresLangues(Arrays.asList("francais","italien"));
+        d.addSousTitres(Arrays.asList("néerlandais","russe"));
+        lo.add(d);
+
+        a1.addOuvrage(d);
+
+        a1 = new Auteur("Kubrick","Stanley","GB");
+        la.add(a1);
+
+        a1.addOuvrage(d);
 
 
-        lect1.addLloc(loc1);
+        CD c1 = new CD("The Compil 2023",0,LocalDate.of(2023,1,1),2,"English","POP",1245,(byte)20,LocalTime.of(1,40,0));
+        lo.add(c1);
 
-        a1.addOuvrage(l1);
+        Rayon r = new Rayon("r12","aventure");
+        lr.add(r);
+
+        Exemplaire e = new Exemplaire("m12","état neuf",l1);
+        lex.add(e);
+        e.setRayon(r);
 
 
+        r = new Rayon("r45","science fiction");
+        lr.add(r);
+
+        e = new Exemplaire("d12","griffé",d);
+        lex.add(e);
+
+        e.setRayon(r);
 
 
+        Lecteur lec = new Lecteur(1,"Dupont","Jean",LocalDate.of(2000,1,4),"Mons","jean.dupont@mail.com","0458774411");
+        llect.add(lec);
+
+        Location loc = new Location(LocalDate.of(2023,2,1),LocalDate.of(2023,3,1),lec,e);
+        lloc.add(loc);
+        loc.setDateRestitution(LocalDate.of(2023,2,4));
+
+        lec = new Lecteur(1,"Durant","Aline",LocalDate.of(1980,10,10),"Binche","aline.durant@mail.com","045874444");
+        llect.add(lec);
+
+        loc = new Location(LocalDate.of(2023,2,5),LocalDate.of(2023,3,5),lec,e);
+        lloc.add(loc);
 
 
         System.out.println(a1.getLouvrage().toString());
@@ -254,8 +331,5 @@ public class Gestion extends OuvrageFactory
         Gestion g = new Gestion();
         g.populate();
         g.menu();
-        //TODO ajouter les methodes UML
-        //TODO ajouter add automatique
-        //TODO ajouter les gestion au dessus d'ici
     }
 }
