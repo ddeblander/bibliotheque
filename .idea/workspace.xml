@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="483450d0-41b9-46a6-bb09-c960a9aa3bf6" name="Changes" comment="-add Builder Livre and Ouvrage need to be completed">
-      <change afterPath="$PROJECT_DIR$/src/utilitaires/CDFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utilitaires/DVDFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utilitaires/LivreFactory.java" afterDir="false" />
+    <list default="true" id="483450d0-41b9-46a6-bb09-c960a9aa3bf6" name="Changes" comment="-add method to manage Ouvrage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gestion/Gestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gestion/Gestion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/metier/CD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metier/CD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/metier/DVD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metier/DVD.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/metier/Exemplaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metier/Exemplaire.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,6 +40,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TODO_SCOPE": "All Places",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Users/HPXeon/IdeaProjects/bibliothequeMine/src/utilitaires",
     "node.js.detected.package.eslint": "true",
@@ -103,7 +99,8 @@
       <workItem from="1678268002404" duration="4000" />
       <workItem from="1678354605698" duration="4567000" />
       <workItem from="1678897828311" duration="1968000" />
-      <workItem from="1678917295357" duration="1712000" />
+      <workItem from="1678917295357" duration="2374000" />
+      <workItem from="1679494620566" duration="426000" />
     </task>
     <task id="LOCAL-00001" summary="-first">
       <created>1675782602313</created>
@@ -175,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677151639302</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="-add method to manage Ouvrage">
+      <created>1678919071048</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1678919071048</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,7 +206,8 @@
     <MESSAGE value="-implement switch to select option for users&#10;-add Exception for using letters instead of numbers" />
     <MESSAGE value="-add package metier and gestion" />
     <MESSAGE value="-add Builder Livre and Ouvrage need to be completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="-add Builder Livre and Ouvrage need to be completed" />
+    <MESSAGE value="-add method to manage Ouvrage" />
+    <option name="LAST_COMMIT_MESSAGE" value="-add method to manage Ouvrage" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

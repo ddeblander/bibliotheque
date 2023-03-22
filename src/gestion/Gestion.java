@@ -1,8 +1,7 @@
 package gestion;
 
 import metier.*;
-import utilitaires.OuvrageFactory;
-import utilitaires.Utilitaire;
+import utilitaires.*;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -24,67 +23,33 @@ public class Gestion extends OuvrageFactory
 
     private void menu()
     {
-        Scanner sc= new Scanner(System.in);
-        int choix=0;
-        System.out.println("1.auteur,2.ouvrage etc... 8.fin");
-            try
-            {
-                choix=sc.nextInt();
-            }catch(Exception e)
-            {
-                System.out.println(e.toString());
-                sc.skip("/n");
+        List options = new ArrayList<>(Arrays.asList("auteurs","ouvrages","exemplaires","rayons","lecteurs","locations","restitution","fin"));
+        do{
+            int choix = Utilitaire.choixListe(options);
+
+            switch (choix){
+                case 1 :gestAuteurs(); break;
+                case 2 : gestOuvrages();break;
+                case 3 : gestExemplaires();break;
+                case 4 : gestRayons();break;
+                case 5 : gestLecteurs();break;
+                case 6 : gestLocations();break;
+                case 7 : gestRestitution();break;
+                default:System.exit(0);
             }
-            lo.add(super.create());
-            //TODO continuer la solution du prof avec les factory et l'implémenter ici
-            /*switch(choix)
-            {
-                case 1 : gestAuteurs();
-                    break;
-                case 2 : gestOuvrages();
-                    break;
-                case 3 : gestLecteurs();
-                    break;
-                case 4 : gestRayons();
-                    break;
-                case 5 : gestExemplaires();
-                    break;
-                case 6 : louer();
-                    break;
-                case 7 : rendre();
-                    break;
-                case 8 : exit();
-                    break;
-                default:
-                    System.out.println(erreur);
-            }
-        }while(choix !=8);*/
+        }  while (true);
     }
     private void gestOuvrages()
     {
-        super.create();
-        Scanner sc = new Scanner(System.in);
+        TypeOuvrage[] tto = TypeOuvrage.values();
+        List<TypeOuvrage> lto = new ArrayList<>(Arrays.asList(tto));
+        int choix = Utilitaire.choixListe(lto);
+        Ouvrage o = null;
 
-        TypeOuvrage typeOuvrages[]=TypeOuvrage.values();
-        short choice=selectionCRUD();
-        if(choice==1)
-        {
-
-        }
-        else if(choice==2)
-        {
-            System.out.println("2");
-        }
-        else if(choice==3)
-        {
-            System.out.println("3");
-
-        }
-        else
-        {
-            System.out.println("4");
-
-        }
+        List<OuvrageFactory> lof = new ArrayList<>(Arrays.asList(new LivreFactory(),new CDFactory(),new DVDFactory()));
+        o = lof.get(choix-1).create();
+        lo.add(o);
+        System.out.println("ouvrage créé");
     }
     private void gestAuteurs()
     {

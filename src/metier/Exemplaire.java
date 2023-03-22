@@ -89,12 +89,44 @@ public class Exemplaire {
                 ", rayon=" + rayon +
                 '}';
     }
-
-    public void envoiMailLecteurActuel(Mail mail){
-        //TODO envoi mail lecteur exemplaire en println
+    public Lecteur lecteurActuel()
+    {
+        if(enLocation())
+        {
+            return lloc.get(lloc.size()-1).getLoueur();
+        }
+        return null;
     }
-    public void envoiMailLecteurs(Mail mail){
-        //TODO envoi mail lecteurs exemplaire en println
+    public List<Lecteur> lecteurs()
+    {
+        List<Lecteur> ll = new ArrayList<>();
+        for(Location l : lloc)
+        {
+            if(ll.contains(l.getLoueur()));
+            ll.add(l.getLoueur());
+        }
+        return null;
+    }
+    public void envoiMailLecteurActuel(Mail mail)
+    {
+        if(lecteurActuel()!=null)
+        {
+            System.out.println("envoi de "+mail+ " à "+lecteurActuel().getMail());
+        }
+        else System.out.println("aucune location en cours");
+    }
+    public void envoiMailLecteurs(Mail mail)
+    {
+        List<Lecteur>ll=lecteurs();
+        if(ll.isEmpty())
+        {
+            System.out.println("aucun lecteur enregistré");
+        }
+        else{
+            for(Lecteur l: ll){
+                System.out.println("envoi de "+mail+ " à "+l.getMail());
+            }
+        }
     }
 
     public boolean enLocation()
