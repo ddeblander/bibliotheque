@@ -31,7 +31,7 @@ public class Lecteur {
         return numlecteur;
     }
 
-    public void setNumlecteur(int numlecteur) {
+    private void setNumlecteur(int numlecteur) {
         this.numlecteur = numlecteur;
     }
 
