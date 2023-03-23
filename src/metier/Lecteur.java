@@ -1,9 +1,7 @@
 package metier;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 public class Lecteur {
     private int numlecteur;
@@ -15,7 +13,8 @@ public class Lecteur {
 
     private List<Location> lloc;
 
-    public Lecteur(int numlecteur, String nom, String prenom, LocalDate dn, String adresse, String mail, String tel) {
+    public Lecteur(int numlecteur, String nom, String prenom, LocalDate dn, String adresse, String mail, String tel)
+    {
         this.numlecteur = numlecteur;
         this.nom = nom;
         this.prenom = prenom;
@@ -27,76 +26,98 @@ public class Lecteur {
         lloc = new ArrayList<>();
     }
 
-    public int getNumlecteur() {
+    public int getNumlecteur()
+    {
         return numlecteur;
     }
 
-    private void setNumlecteur(int numlecteur) {
+    public void setNumlecteur(int numlecteur)
+    {
         this.numlecteur = numlecteur;
     }
 
-    public String getNom() {
+    public String getNom()
+    {
         return nom;
     }
 
-    public void setNom(String nom) {
+    public void setNom(String nom)
+    {
         this.nom = nom;
     }
 
-    public String getPrenom() {
+    public String getPrenom()
+    {
         return prenom;
     }
 
-    public void setPrenom(String prenom) {
+    public void setPrenom(String prenom)
+    {
         this.prenom = prenom;
     }
 
-    public LocalDate getDn() {
+    public LocalDate getDn()
+    {
         return dn;
     }
 
-    public void setDn(LocalDate dn) {
+    public void setDn(LocalDate dn)
+    {
         this.dn = dn;
     }
 
-    public String getAdresse() {
+    public String getAdresse()
+    {
         return adresse;
     }
 
-    public void setAdresse(String adresse) {
+    public void setAdresse(String adresse)
+    {
         this.adresse = adresse;
     }
 
-    public String getMail() {
+    public String getMail()
+    {
         return mail;
     }
 
-    public void setMail(String mail) {
+    public void setMail(String mail)
+    {
         this.mail = mail;
     }
 
-    public String getTel() {
+    public String getTel()
+    {
         return tel;
     }
 
-    public void setTel(String tel) {
+    public void setTel(String tel)
+    {
         this.tel = tel;
     }
 
-    public List<Location> getLloc() {
+    public List<Location> getLloc()
+    {
         return lloc;
     }
-    public void addLloc(Location l) {
+    public void addLloc(Location l)
+    {
         lloc.add(l);
     }
-    public boolean deleteLloc(Location l) {
-       return lloc.remove(l);
+    public boolean deleteLloc(Location l)
+    {
+
+        return lloc.remove(l);
     }
-    public Location readLloc(int id) {
+    public Location readLloc(int id)
+    {
+
         return lloc.get(id);
     }
 
-    public void setLloc(List<Location> lloc) {
+    public void setLloc(List<Location> lloc)
+    {
+
         this.lloc = lloc;
     }
 
@@ -114,15 +135,40 @@ public class Lecteur {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+    public boolean equals(Object o)
+    {
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
         Lecteur lecteur = (Lecteur) o;
         return numlecteur == lecteur.numlecteur;
     }
 
     @Override
-    public int hashCode() {
+    public int hashCode()
+    {
+
         return Objects.hash(numlecteur);
+    }
+
+    public List<Exemplaire> listerExemplairesEnLocation()
+    {
+        List<Exemplaire> lex = new ArrayList<>();
+        for(Location loc : lloc)
+        {
+            if(loc.getDateRestitution()!=null)lex.add(loc.getExemplaire());
+        }
+        return lex;
+    }
+
+    public Set<Exemplaire> listerExemplairesLoues()
+    {
+        Set<Exemplaire> stex = new HashSet<>();
+        for(Location loc : lloc)
+        {
+            stex.add(loc.getExemplaire());
+        }
+        return stex;
     }
 }
