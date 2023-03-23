@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="483450d0-41b9-46a6-bb09-c960a9aa3bf6" name="Changes" comment="-add method to manage Ouvrage">
-      <change afterPath="$PROJECT_DIR$/src/model/DAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/LecteurModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/SpecialLecteur.java" afterDir="false" />
+    <list default="true" id="483450d0-41b9-46a6-bb09-c960a9aa3bf6" name="Changes" comment="-DAO and LecteurModel">
+      <change afterPath="$PROJECT_DIR$/src/presenter/LecteurPresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/LecteurViewConsole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/ViewInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/metier/Lecteur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metier/Lecteur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utilitaires/LecteurFactory.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utilitaires/Utilitaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilitaires/Utilitaire.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -186,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678919071048</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="-DAO and LecteurModel">
+      <created>1679568593381</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1679568593381</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,7 +219,8 @@
     <MESSAGE value="-add package metier and gestion" />
     <MESSAGE value="-add Builder Livre and Ouvrage need to be completed" />
     <MESSAGE value="-add method to manage Ouvrage" />
-    <option name="LAST_COMMIT_MESSAGE" value="-add method to manage Ouvrage" />
+    <MESSAGE value="-DAO and LecteurModel" />
+    <option name="LAST_COMMIT_MESSAGE" value="-DAO and LecteurModel" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
