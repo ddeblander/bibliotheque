@@ -7,27 +7,43 @@ import java.util.Scanner;
 
 public class Utilitaire {
     private static Scanner sc = new Scanner(System.in);
-    public static int choixListe(List l){
+    public static int choixListe(List l)
+    {
 
         int i =1;
-        for(Object o :l) {
+        for(Object o :l)
+        {
             System.out.println((i++)+"."+o);
         }
+
         int choix;
-        do {
+        do
+        {
             System.out.println("choix :");
-            choix = sc.nextInt();
-            sc.skip("\n");
+            try
+            {
+                choix = sc.nextInt();
+                sc.skip("\n");
+            }
+            catch (Exception e)
+            {
+                System.out.println(e.toString());
+                return choixListe(l);
+            }
+
         } while(choix <1 || choix > l.size());
+
         return choix;
     }
-    public static void affListe(List l){
+    public static void affListe(List l)
+    {
         int i =1;
         for(Object o :l) {
             System.out.println((i++)+"."+o);
         }
     }
-    public static LocalDate lecDate(){
+    public static LocalDate lecDate()
+    {
         String[] jma = sc.nextLine().split(" ");
         int j = Integer.parseInt(jma[0]);
         int m = Integer.parseInt(jma[1]);
@@ -35,34 +51,58 @@ public class Utilitaire {
         return LocalDate.of(a,m,j);
     }
 
-    public static LocalTime lecTime(){
+    public static LocalTime lecTime()
+    {
         String[] hms = sc.nextLine().split(" ");
         int h = Integer.parseInt(hms[0]);
         int m = Integer.parseInt(hms[1]);
         int s = Integer.parseInt(hms[2]);
         return LocalTime.of(h,m,s);
     }
-    public static String getDateFrench(LocalDate d){
+    public static String getDateFrench(LocalDate d)
+    {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("d MM yyyy");
         return dtf.format(d);
     }
 
-    public static String modifyIfNotBlank(String label,String oldValue){
+    public static String modifyIfNotBlank(String label,String oldValue)
+    {
         System.out.println(label+" : "+oldValue);
         System.out.print("nouvelle valeur (enter si pas de changement) : ");
-        String newValue= sc.nextLine();
-        if(newValue.isBlank()) return oldValue;
-        return newValue;
+        try
+        {
+            String newValue= sc.nextLine();
+            if(newValue.isBlank()) return oldValue;
+            if(newValue.matches(".*[0-9].*"))
+            {
+                System.out.println("mauvais encodage, veuillez reéssayer car vous avez utilisez des nombes.");
+                return modifyIfNotBlank(label,oldValue);
+            }
+            return newValue;
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.toString());
+            return modifyIfNotBlank(label,oldValue);
+        }
     }
     public static int choixElt(List l)
     {
         int choix;
-        do
+        try {
+                do
+                {
+                    System.out.println("choix :");
+                    choix = sc.nextInt();
+                    sc.skip("\n");
+                }
+                while(choix <1 || choix > l.size());
+                    return choix;
+            }catch (Exception e)
         {
-            System.out.println("choix :");
-            choix = sc.nextInt();
-            sc.skip("\n");
-        } while(choix <1 || choix > l.size());
-        return choix;
+            System.out.println(e.toString());
+            return choixElt(l);
+        }
+
     }
 }

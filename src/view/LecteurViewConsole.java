@@ -73,13 +73,15 @@ public class LecteurViewConsole implements ViewInterface
             }
         } while (true);
     }
-    private void rechercher() {
+    private void rechercher()
+    {
         System.out.println("numLecteur : ");
         int idLecteur = sc.nextInt();
         presenter.search(idLecteur);
     }
 
-    private void modifier() {
+    private void modifier()
+    {
         int choix = choixElt(llec);
         Lecteur l = llec.get(choix-1);
         String nom = modifyIfNotBlank("nom",l.getNom());
@@ -97,6 +99,7 @@ public class LecteurViewConsole implements ViewInterface
         presenter.update(lec);
         llec=presenter.getAll();//rafraichissement
         affListe(llec);
+
     }
 
     private void retirer() {
@@ -108,7 +111,8 @@ public class LecteurViewConsole implements ViewInterface
     }
 
 
-    private void ajouter() {
+    private void ajouter()
+    {
         System.out.println("nom ");
         String nom = sc.nextLine();
         System.out.println("prénom ");
@@ -130,7 +134,8 @@ public class LecteurViewConsole implements ViewInterface
         llec=presenter.getAll();//rafraichissement
         affListe(llec);
     }
-    private void special() {
+    private void special()
+    {
         int choix =  choixElt(llec);
         Lecteur lec = llec.get(choix-1);
         do {

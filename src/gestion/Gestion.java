@@ -1,7 +1,10 @@
 package gestion;
 
 import metier.*;
+import model.LecteurModel;
+import presenter.LecteurPresenter;
 import utilitaires.*;
+import view.LecteurViewConsole;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -75,25 +78,9 @@ public class Gestion extends OuvrageFactory
     }
     private void gestLecteurs()
     {
-        short choice=selectionCRUD();
-        if(choice==1)
-        {
-            System.out.println("1");
-        }
-        else if(choice==2)
-        {
-            System.out.println("2");
-        }
-        else if(choice==3)
-        {
-            System.out.println("3");
-
-        }
-        else
-        {
-            System.out.println("4");
-
-        }
+        LecteurViewConsole lv = new LecteurViewConsole();
+        lv.setPresenter(new LecteurPresenter(new LecteurModel(),lv));
+        lv.setListDatas(llect);
     }
     private void gestRayons()
     {
