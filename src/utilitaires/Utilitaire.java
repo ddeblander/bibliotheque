@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 public class Utilitaire {
     private static Scanner sc = new Scanner(System.in);
+    private static String errMSG="  veuillez introduire à nouveau le champs car valeur incorrecte";
     public static int choixListe(List l)
     {
 
@@ -22,12 +23,14 @@ public class Utilitaire {
             System.out.println("choix :");
             try
             {
+
                 choix = sc.nextInt();
                 sc.skip("\n");
             }
             catch (Exception e)
             {
-                System.out.println(e.toString());
+                sc=new Scanner(System.in);
+                System.out.println(e.toString()+errMSG);
                 return choixListe(l);
             }
 
@@ -44,20 +47,39 @@ public class Utilitaire {
     }
     public static LocalDate lecDate()
     {
-        String[] jma = sc.nextLine().split(" ");
-        int j = Integer.parseInt(jma[0]);
-        int m = Integer.parseInt(jma[1]);
-        int a = Integer.parseInt(jma[2]);
-        return LocalDate.of(a,m,j);
+        try
+        {
+            String[] jma = sc.nextLine().split(" ");
+            int j = Integer.parseInt(jma[0]);
+            int m = Integer.parseInt(jma[1]);
+            int a = Integer.parseInt(jma[2]);
+            return LocalDate.of(a,m,j);
+        }catch (Exception e)
+        {
+            System.out.println(e.toString()+errMSG);
+            sc=new Scanner(System.in);
+            return lecDate();
+        }
+
+
+
     }
 
     public static LocalTime lecTime()
     {
-        String[] hms = sc.nextLine().split(" ");
-        int h = Integer.parseInt(hms[0]);
-        int m = Integer.parseInt(hms[1]);
-        int s = Integer.parseInt(hms[2]);
-        return LocalTime.of(h,m,s);
+        try
+        {
+            String[] hms = sc.nextLine().split(" ");
+            int h = Integer.parseInt(hms[0]);
+            int m = Integer.parseInt(hms[1]);
+            int s = Integer.parseInt(hms[2]);
+            return LocalTime.of(h,m,s);
+        }catch (Exception e)
+        {
+            System.out.println(e.toString()+errMSG);
+            sc=new Scanner(System.in);
+            return lecTime();
+        }
     }
     public static String getDateFrench(LocalDate d)
     {
@@ -75,7 +97,7 @@ public class Utilitaire {
             if(newValue.isBlank()) return oldValue;
             if(newValue.matches(".*[0-9].*"))
             {
-                System.out.println("mauvais encodage, veuillez reéssayer car vous avez utilisez des nombes.");
+                System.out.println("mauvais encodage, veuillez reéssayer car vous avez utilisez des nombres.");
                 return modifyIfNotBlank(label,oldValue);
             }
             return newValue;
@@ -84,6 +106,39 @@ public class Utilitaire {
         {
             System.out.println(e.toString());
             return modifyIfNotBlank(label,oldValue);
+        }
+    }
+    public static String CreateString(String label)
+    {
+        System.out.println(label);
+        try
+        {
+            String newValue= sc.nextLine();
+            return newValue;
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.toString());
+            return CreateString(label);
+        }
+    }
+    public static String CreateStringName(String label)
+    {
+        System.out.println(label);
+        try
+        {
+            String newValue= sc.nextLine();
+            if(newValue.matches(".*[0-9].*"))
+            {
+                System.out.println("mauvais encodage, veuillez reéssayer car vous avez utilisez des nombres.");
+                return CreateStringName(label);
+            }
+            return newValue;
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.toString()+errMSG);
+            return CreateStringName(label);
         }
     }
     public static int choixElt(List l)
@@ -99,10 +154,11 @@ public class Utilitaire {
                 while(choix <1 || choix > l.size());
                     return choix;
             }catch (Exception e)
-        {
-            System.out.println(e.toString());
-            return choixElt(l);
-        }
+            {
+                System.out.println(e.toString());
+
+                return choixElt(l);
+            }
 
     }
 }

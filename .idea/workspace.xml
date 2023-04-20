@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="483450d0-41b9-46a6-bb09-c960a9aa3bf6" name="Changes" comment="-Lecteur MVP done">
+    <list default="true" id="483450d0-41b9-46a6-bb09-c960a9aa3bf6" name="Changes" comment="-using LecteurPesenter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gestion/Gestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gestion/Gestion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utilitaires/Utilitaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilitaires/Utilitaire.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/LecteurViewConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/LecteurViewConsole.java" afterDir="false" />
     </list>
@@ -105,7 +104,8 @@
       <workItem from="1678897828311" duration="1968000" />
       <workItem from="1678917295357" duration="2374000" />
       <workItem from="1679494620566" duration="426000" />
-      <workItem from="1681886103708" duration="2640000" />
+      <workItem from="1681886103708" duration="3338000" />
+      <workItem from="1681982044218" duration="2570000" />
     </task>
     <task id="LOCAL-00001" summary="-first">
       <created>1675782602313</created>
@@ -198,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679569976243</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="-using LecteurPesenter">
+      <created>1681888834073</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1681888834073</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,7 +235,8 @@
     <MESSAGE value="-add method to manage Ouvrage" />
     <MESSAGE value="-DAO and LecteurModel" />
     <MESSAGE value="-Lecteur MVP done" />
-    <option name="LAST_COMMIT_MESSAGE" value="-Lecteur MVP done" />
+    <MESSAGE value="-using LecteurPesenter" />
+    <option name="LAST_COMMIT_MESSAGE" value="-using LecteurPesenter" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

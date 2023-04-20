@@ -4,21 +4,19 @@ import metier.Lecteur;
 import presenter.LecteurPresenter;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 import static utilitaires.Utilitaire.*;
 
 public class LecteurViewConsole implements ViewInterface
 {
+    private LinkedList<String> labels= new LinkedList<>();
     private LecteurPresenter presenter;
     private List<Lecteur> llec;
     private Scanner sc = new Scanner(System.in);
     public LecteurViewConsole()
     {
-
+        labels.addAll(Arrays.asList("nom","prenom","date de naissance","adresse","mail","tel"));
     }
     @Override
     public void setPresenter(Object presenter)
@@ -84,17 +82,17 @@ public class LecteurViewConsole implements ViewInterface
     {
         int choix = choixElt(llec);
         Lecteur l = llec.get(choix-1);
-        String nom = modifyIfNotBlank("nom",l.getNom());
-        String prenom = modifyIfNotBlank("prenom",l.getPrenom());
-        String date = modifyIfNotBlank("date de naissance",getDateFrench(l.getDn()));
+        String nom = modifyIfNotBlank(labels.get(0),l.getNom());
+        String prenom = modifyIfNotBlank(labels.get(1),l.getPrenom());
+        String date = modifyIfNotBlank(labels.get(2),getDateFrench(l.getDn()));
         String[] jma = date.split(" ");
         int j = Integer.parseInt(jma[0]);
         int m = Integer.parseInt(jma[1]);
         int a = Integer.parseInt(jma[2]);
         LocalDate dn = LocalDate.of(a, m, j);
-        String adr = modifyIfNotBlank("adresse",l.getAdresse());
-        String mail= modifyIfNotBlank("mail",l.getMail());
-        String tel =modifyIfNotBlank("tel",l.getTel());
+        String adr = modifyIfNotBlank(labels.get(3),l.getAdresse());
+        String mail= modifyIfNotBlank(labels.get(4),l.getMail());
+        String tel =modifyIfNotBlank(labels.get(5),l.getTel());
         Lecteur lec = new Lecteur(l.getNumlecteur(), nom, prenom, dn, adr, mail, tel);
         presenter.update(lec);
         llec=presenter.getAll();//rafraichissement
@@ -111,24 +109,27 @@ public class LecteurViewConsole implements ViewInterface
     }
 
 
+
     private void ajouter()
     {
-        System.out.println("nom ");
-        String nom = sc.nextLine();
-        System.out.println("prénom ");
-        String prenom = sc.nextLine();
-        System.out.println("date de naissance");
-        String[] jma = sc.nextLine().split(" ");
-        int j = Integer.parseInt(jma[0]);
-        int m = Integer.parseInt(jma[1]);
-        int a = Integer.parseInt(jma[2]);
-        LocalDate dn = LocalDate.of(a, m, j);
-        System.out.println("adresse");
-        String adr = sc.nextLine();
-        System.out.println("mail");
-        String mail = sc.nextLine();
-        System.out.println("tel ");
-        String tel = sc.nextLine();
+        String nom = CreateStringName(labels.get(0));
+
+        String prenom = CreateStringName(labels.get(1));
+
+        System.out.println(labels.get(2));
+        LocalDate dn = lecDate();
+
+        String adr = CreateString(labels.get(3));
+
+        String mail = CreateString(labels.get(4));
+
+        String tel = CreateString(labels.get(5));
+        while(!tel.matches(".*[0-9].*"))
+        {
+                System.out.println("Veuillez inserer un numéro de téléphone sans lettre");
+                tel = CreateString(labels.get(5));
+        }
+
         Lecteur lec = new Lecteur(0, nom, prenom, dn, adr, mail, tel);
         presenter.addLecteur(lec);
         llec=presenter.getAll();//rafraichissement
