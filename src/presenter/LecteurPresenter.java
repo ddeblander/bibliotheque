@@ -9,14 +9,13 @@ import view.ViewInterface;
 import javax.swing.text.View;
 import java.util.List;
 
-public class LecteurPresenter {
+public class LecteurPresenter extends Presenter<Lecteur>
+{
     private DAO model;
     private ViewInterface view;
 
-    public LecteurPresenter(DAO model, ViewInterface view) {
-        this.model = model;
-        this.view = view;
-        this.view.setPresenter(this);
+    public LecteurPresenter(DAO<Lecteur> model, ViewInterface<Lecteur> view) {
+        super(model, view);
     }
 
     public void start() {
@@ -51,9 +50,17 @@ public class LecteurPresenter {
     }
 
     public void search(int idLecteur) {
-        Lecteur l = (Lecteur) model.getByID(idLecteur);
-        if(l==null) view.affMsg("recherche infructueuse");
-        else view.affMsg(l.toString());
+        try
+        {
+            Lecteur l = (Lecteur) model.read(new Lecteur(idLecteur,"search","search",null,"","",""));
+            if(l==null) view.affMsg("recherche infructueuse");
+            else view.affMsg(l.toString());
+        }catch (Exception e)
+        {
+            System.out.println(e.toString());
+        }
+
+
     }
 
     public void exemplairesEnLocation(Lecteur l) {

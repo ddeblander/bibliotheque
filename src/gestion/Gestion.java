@@ -218,61 +218,76 @@ public class Gestion extends OuvrageFactory
 
     private void populate()
     {
-        Auteur a1= new Auteur("Kenoby  ","Jean","Belgique");
-        Livre l1 = new Livre("L'avance Rapide",12, LocalDate.now(),22.0,"Fraçcais","Science-Fiction","548415-494",550,TypeLivre.DOCUMENTAIRE,"c1'est l'histoire");
-        Rayon r1 = new Rayon("42", l1.getGenre());
-        Exemplaire ex1= new Exemplaire("45613A","Open",l1);
-        Lecteur lect1 = new Lecteur(285,"Jean","Jacques",LocalDate.MIN,"46 Grand rue ","Zbla@Yahoo.be","465541652");
-        Location loc1 = new Location(LocalDate.now(),LocalDate.of(2023,3,22),lect1,ex1);
-        DVD d = new DVD("AI",12,LocalDate.of(2000,10,1),2.50,"anglais","SF",4578l,LocalTime.of(2,0,0),(byte)2);
-        CD c = new CD("The Compil 2023",0,LocalDate.of(2023,1,1),2,"English","POP",1245,(byte)20, LocalTime.of(1,40,0));
+        Auteur a1=null;
+        Auteur a2=null;
+        Livre l1=null;
+        Rayon r1=null;
 
-        la.add(a1);
-        lo.add(l1);
-        d.addAutresLangues(Arrays.asList("francais","italien"));
-        d.addSousTitres(Arrays.asList("néerlandais","russe"));
-        lo.add(d);
+        try
+        {
+            a1= new Auteur("Kenoby  ","Jean","Belgique");
+            a2 = new Auteur("Kubrick","Stanley","GB");
+            l1 = new Livre("L'avance Rapide",12, LocalDate.now(),22.0,"Fraçcais","Science-Fiction","548415-494",550,TypeLivre.DOCUMENTAIRE,"c1'est l'histoire");
+            r1 = new Rayon("42", l1.getGenre());
+            Exemplaire ex1= new Exemplaire("45613A","Open",l1);
+            Lecteur lect1 = new Lecteur(285,"Jean","Jacques",LocalDate.MIN,"46 Grand rue ","Zbla@Yahoo.be","465541652");
+            Location loc1 = new Location(LocalDate.now(),LocalDate.of(2023,3,22),lect1,ex1);
+            DVD d = new DVD("AI",12,LocalDate.of(2000,10,1),2.50,"anglais","SF",4578l,LocalTime.of(2,0,0),(byte)2);
+            CD c = new CD("The Compil 2023",0,LocalDate.of(2023,1,1),2,"English","POP",1245,(byte)20, LocalTime.of(1,40,0));
 
-        a1.addOuvrage(d);
+            la.add(a1);
+            lo.add(l1);
+            d.addAutresLangues(Arrays.asList("francais","italien"));
+            d.addSousTitres(Arrays.asList("néerlandais","russe"));
+            lo.add(d);
 
-        a1 = new Auteur("Kubrick","Stanley","GB");
-        la.add(a1);
-
-        a1.addOuvrage(d);
-
-
-        CD c1 = new CD("The Compil 2023",0,LocalDate.of(2023,1,1),2,"English","POP",1245,(byte)20,LocalTime.of(1,40,0));
-        lo.add(c1);
-
-        Rayon r = new Rayon("r12","aventure");
-        lr.add(r);
-
-        Exemplaire e = new Exemplaire("m12","état neuf",l1);
-        lex.add(e);
-        e.setRayon(r);
+            a1.addOuvrage(d);
 
 
-        r = new Rayon("r45","science fiction");
-        lr.add(r);
+            la.add(a2);
 
-        e = new Exemplaire("d12","griffé",d);
-        lex.add(e);
-
-        e.setRayon(r);
+            a2.addOuvrage(d);
 
 
-        Lecteur lec = new Lecteur(1,"Dupont","Jean",LocalDate.of(2000,1,4),"Mons","jean.dupont@mail.com","0458774411");
-        llect.add(lec);
+            CD c1 = new CD("The Compil 2023",0,LocalDate.of(2023,1,1),2,"English","POP",1245,(byte)20,LocalTime.of(1,40,0));
+            lo.add(c1);
 
-        Location loc = new Location(LocalDate.of(2023,2,1),LocalDate.of(2023,3,1),lec,e);
-        lloc.add(loc);
-        loc.setDateRestitution(LocalDate.of(2023,2,4));
+            Rayon r = new Rayon("r12","aventure");
+            lr.add(r);
 
-        lec = new Lecteur(1,"Durant","Aline",LocalDate.of(1980,10,10),"Binche","aline.durant@mail.com","045874444");
-        llect.add(lec);
+            Exemplaire e = new Exemplaire("m12","état neuf",l1);
+            lex.add(e);
+            e.setRayon(r);
 
-        loc = new Location(LocalDate.of(2023,2,5),LocalDate.of(2023,3,5),lec,e);
-        lloc.add(loc);
+
+            r = new Rayon("r45","science fiction");
+            lr.add(r);
+
+            e = new Exemplaire("d12","griffé",d);
+            lex.add(e);
+
+            e.setRayon(r);
+
+
+            Lecteur lec = new Lecteur(1,"Dupont","Jean",LocalDate.of(2000,1,4),"Mons","jean.dupont@mail.com","0458774411");
+            llect.add(lec);
+
+            Location loc = new Location(LocalDate.of(2023,2,1),LocalDate.of(2023,3,1),lec,e);
+            lloc.add(loc);
+            loc.setDateRestitution(LocalDate.of(2023,2,4));
+
+            lec = new Lecteur(1,"Durant","Aline",LocalDate.of(1980,10,10),"Binche","aline.durant@mail.com","045874444");
+            llect.add(lec);
+
+            loc = new Location(LocalDate.of(2023,2,5),LocalDate.of(2023,3,5),lec,e);
+            lloc.add(loc);
+        }catch(Exception e)
+        {
+            System.out.println(e.toString());
+
+        }
+
+
 
 
         System.out.println(a1.getLouvrage().toString());

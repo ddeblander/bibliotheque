@@ -9,7 +9,12 @@ public class Auteur {
     private String nationalite;
     private List<Ouvrage> louvrage = new ArrayList<>();
 
-    public Auteur(String nom, String prenom, String nationalite) {
+    public Auteur(String nom, String prenom, String nationalite) throws Exception
+    {
+        if(nom==null || nom.trim().equals(""))
+        {
+            throw new Exception ("nom invalide");
+        }
         this.nom = nom;
         this.prenom = prenom;
         this.nationalite = nationalite;

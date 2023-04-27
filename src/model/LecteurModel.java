@@ -57,16 +57,23 @@ public class LecteurModel implements DAO,SpecialLecteur
     }
 
     @Override
-    public Lecteur getByID(int id)
+    public Lecteur read(Object o)
     {
-        for (Lecteur l : lecteurs) {
-            if (l.getNumlecteur() == id)
+        if(o == null)
+        {
+            return null;
+        }
+        Lecteur l = (Lecteur) o;
+        for(Lecteur i : lecteurs)
+        {
+            if(i.equals(l))
             {
-                return l;
+                return i;
             }
         }
         return null;
     }
+
 
     @Override
     public List<Exemplaire> exemplairesEnLocation(Lecteur l)
@@ -79,10 +86,18 @@ public class LecteurModel implements DAO,SpecialLecteur
     {
         return new ArrayList<>(l.listerExemplairesLoues());
     }
-    private void populate(){
-        Lecteur lec = new Lecteur(0,"Dupont","Jean", LocalDate.of(2000,1,4),"Mons","jean.dupont@mail.com","0458774411");
-        add(lec);
-        lec = new Lecteur(0,"Durant","Aline",LocalDate.of(1980,10,10),"Binche","aline.durant@mail.com","045874444");
-        add(lec);
+    private void populate()
+    {
+        try
+        {
+            Lecteur lec = new Lecteur(0,"Dupont","Jean", LocalDate.of(2000,1,4),"Mons","jean.dupont@mail.com","0458774411");
+            add(lec);
+            lec = new Lecteur(0,"Durant","Aline",LocalDate.of(1980,10,10),"Binche","aline.durant@mail.com","045874444");
+            add(lec);
+        }catch(Exception e)
+        {
+
+        }
+
     }
 }

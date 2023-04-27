@@ -4,10 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="483450d0-41b9-46a6-bb09-c960a9aa3bf6" name="Changes" comment="-using LecteurPesenter">
+    <list default="true" id="483450d0-41b9-46a6-bb09-c960a9aa3bf6" name="Changes" comment="-add Exception in Utilitaire&#10;-mod Utilitaire class to manage Exception and add CreateString Methods">
+      <change afterPath="$PROJECT_DIR$/src/model/RayonModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/presenter/Presenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utilitaires/Utilitaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilitaires/Utilitaire.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/LecteurViewConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/LecteurViewConsole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gestion/Gestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gestion/Gestion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/metier/Auteur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metier/Auteur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/metier/Exemplaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metier/Exemplaire.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/metier/Lecteur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metier/Lecteur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/metier/Ouvrage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metier/Ouvrage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/DAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/LecteurModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/LecteurModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presenter/LecteurPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/presenter/LecteurPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/ViewInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ViewInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +114,8 @@
       <workItem from="1678917295357" duration="2374000" />
       <workItem from="1679494620566" duration="426000" />
       <workItem from="1681886103708" duration="3338000" />
-      <workItem from="1681982044218" duration="2570000" />
+      <workItem from="1681982044218" duration="3381000" />
+      <workItem from="1682584850857" duration="4723000" />
     </task>
     <task id="LOCAL-00001" summary="-first">
       <created>1675782602313</created>
@@ -205,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681888834073</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="-add Exception in Utilitaire&#10;-mod Utilitaire class to manage Exception and add CreateString Methods">
+      <created>1681984671680</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1681984671680</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,7 +253,8 @@
     <MESSAGE value="-DAO and LecteurModel" />
     <MESSAGE value="-Lecteur MVP done" />
     <MESSAGE value="-using LecteurPesenter" />
-    <option name="LAST_COMMIT_MESSAGE" value="-using LecteurPesenter" />
+    <MESSAGE value="-add Exception in Utilitaire&#10;-mod Utilitaire class to manage Exception and add CreateString Methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="-add Exception in Utilitaire&#10;-mod Utilitaire class to manage Exception and add CreateString Methods" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

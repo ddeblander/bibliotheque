@@ -15,7 +15,8 @@ public class Exemplaire {
     private List<Location> lloc;
 
 
-    public Exemplaire(String matricule, String descriptionEtat,Ouvrage ouvrage) {
+    public Exemplaire(String matricule, String descriptionEtat,Ouvrage ouvrage) throws Exception {
+        if(ouvrage==null) throw new Exception("ouvrage invalide");
         rayon=null;
         this.matricule = matricule;
         this.descriptionEtat=descriptionEtat;

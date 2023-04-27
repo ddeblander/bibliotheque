@@ -8,5 +8,5 @@ public interface DAO<T>
     boolean remove(T o);
     boolean update(T o);
     List<T> getAll();
-    T getByID(int id);
+    T read(T o);
 }

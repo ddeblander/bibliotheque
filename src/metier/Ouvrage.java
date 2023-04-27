@@ -17,7 +17,8 @@ public class Ouvrage {
     protected List<Exemplaire> lex;
 
 
-    public Ouvrage(String titre, int ageMin, LocalDate dateParution, TypeOuvrage to, double prixLocation, String langue, String genre) {
+    public Ouvrage(String titre, int ageMin, LocalDate dateParution, TypeOuvrage to, double prixLocation, String langue, String genre) throws Exception {
+        if(titre==null || titre.trim().equals("")) throw new Exception("titre invalide");
         this.titre = titre;
         this.ageMin = ageMin;
         this.dateParution = dateParution;
@@ -172,8 +173,14 @@ public class Ouvrage {
         {
             if((titre!="")&&(dateParution!=null)&&(ageMin!=0)&&(dateParution!=null)&&(to!=null)&&(prixLocation!=0.0)&&(langue!="")&&(genre!=""))
             {
+                try
+                {
+                    return new Ouvrage(titre,ageMin,dateParution,to,prixLocation,langue,genre);
+                }catch (Exception e)
+                {
+                    System.out.println(e.toString());
+                }
 
-                return new Ouvrage(titre,ageMin,dateParution,to,prixLocation,langue,genre);
             }
             return null;
         }
