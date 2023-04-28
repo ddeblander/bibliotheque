@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="483450d0-41b9-46a6-bb09-c960a9aa3bf6" name="Changes" comment="-change some feature from generic class and add RayonModel">
-      <change afterPath="$PROJECT_DIR$/src/model/AbstractModel.java" afterDir="false" />
+    <list default="true" id="483450d0-41b9-46a6-bb09-c960a9aa3bf6" name="Changes" comment="-add AbstractModel class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/presenter/LecteurPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/presenter/LecteurPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/LecteurModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/LecteurModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/RayonModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/RayonModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +107,7 @@
       <workItem from="1681886103708" duration="3338000" />
       <workItem from="1681982044218" duration="3381000" />
       <workItem from="1682584850857" duration="5632000" />
-      <workItem from="1682670918805" duration="2418000" />
+      <workItem from="1682670918805" duration="2775000" />
     </task>
     <task id="LOCAL-00001" summary="-first">
       <created>1675782602313</created>
@@ -228,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682671681529</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="-add AbstractModel class">
+      <created>1682673381676</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1682673381676</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,7 +268,8 @@
     <MESSAGE value="-using LecteurPesenter" />
     <MESSAGE value="-add Exception in Utilitaire&#10;-mod Utilitaire class to manage Exception and add CreateString Methods" />
     <MESSAGE value="-change some feature from generic class and add RayonModel" />
-    <option name="LAST_COMMIT_MESSAGE" value="-change some feature from generic class and add RayonModel" />
+    <MESSAGE value="-add AbstractModel class" />
+    <option name="LAST_COMMIT_MESSAGE" value="-add AbstractModel class" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
