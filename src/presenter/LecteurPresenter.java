@@ -6,12 +6,11 @@ import model.DAO;
 import model.SpecialLecteur;
 import view.ViewInterface;
 
-import javax.swing.text.View;
 import java.util.List;
 
 public class LecteurPresenter extends Presenter<Lecteur>
 {
-    private DAO model;
+    private DAO<Lecteur> model;
     private ViewInterface view;
 
     public LecteurPresenter(DAO<Lecteur> model, ViewInterface<Lecteur> view) {
@@ -27,7 +26,7 @@ public class LecteurPresenter extends Presenter<Lecteur>
     }
 
     public void addLecteur(Lecteur lecteur) {
-        Lecteur lec = (Lecteur) model.add(lecteur);
+        Lecteur lec = model.add(lecteur);
         if(lec!=null) view.affMsg("création de :"+lec);
         else view.affMsg("erreur de création");
         List<Lecteur> lecteurs = model.getAll();
@@ -52,7 +51,7 @@ public class LecteurPresenter extends Presenter<Lecteur>
     public void search(int idLecteur) {
         try
         {
-            Lecteur l = (Lecteur) model.read(new Lecteur(idLecteur,"search","search",null,"","",""));
+            Lecteur l = model.read(new Lecteur(idLecteur,"search","search",null,"","",""));
             if(l==null) view.affMsg("recherche infructueuse");
             else view.affMsg(l.toString());
         }catch (Exception e)
