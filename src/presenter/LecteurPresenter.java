@@ -30,7 +30,6 @@ public class LecteurPresenter extends Presenter<Lecteur>
         if(lec!=null) view.affMsg("création de :"+lec);
         else view.affMsg("erreur de création");
         List<Lecteur> lecteurs = model.getAll();
-        // view.setListDatas(lecteurs); //désactivé pour éviter appels imbriqués
     }
 
 
@@ -39,13 +38,13 @@ public class LecteurPresenter extends Presenter<Lecteur>
         if(ok) view.affMsg("lecteur effacé");
         else view.affMsg("lecteur non effacé");
         List<Lecteur> lecteurs = model.getAll();
-        //view.setListDatas(lecteurs); //désactivé pour éviter appels imbriqués
+
     }
     public void update(Lecteur lecteur) {
         boolean l  =model.update(lecteur);
         if(!l) view.affMsg("mise à jour infrucueuse");
         else view.affMsg("mise à jour effectuée : "+lecteur);
-        //view.setListDatas(model.getClients());//désactivé pour éviter appels imbriqués
+
     }
 
     public void search(int idLecteur) {
