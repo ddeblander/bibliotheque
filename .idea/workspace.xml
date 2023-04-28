@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="483450d0-41b9-46a6-bb09-c960a9aa3bf6" name="Changes" comment="-add AbstractModel class">
+    <list default="true" id="483450d0-41b9-46a6-bb09-c960a9aa3bf6" name="Changes" comment="-add AbstractModel class&#10;-modify LecteurModel and RayonModel to be suitable with AbstractModel">
+      <change afterPath="$PROJECT_DIR$/src/model/SpecialRayon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utilitaires/AbstractViewConsole.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/LecteurModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/LecteurModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/RayonModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/RayonModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/LecteurViewConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/LecteurViewConsole.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +108,7 @@
       <workItem from="1681886103708" duration="3338000" />
       <workItem from="1681982044218" duration="3381000" />
       <workItem from="1682584850857" duration="5632000" />
-      <workItem from="1682670918805" duration="2775000" />
+      <workItem from="1682670918805" duration="4511000" />
     </task>
     <task id="LOCAL-00001" summary="-first">
       <created>1675782602313</created>
@@ -235,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682673381676</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="-add AbstractModel class&#10;-modify LecteurModel and RayonModel to be suitable with AbstractModel">
+      <created>1682673761219</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1682673761219</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,7 +277,8 @@
     <MESSAGE value="-add Exception in Utilitaire&#10;-mod Utilitaire class to manage Exception and add CreateString Methods" />
     <MESSAGE value="-change some feature from generic class and add RayonModel" />
     <MESSAGE value="-add AbstractModel class" />
-    <option name="LAST_COMMIT_MESSAGE" value="-add AbstractModel class" />
+    <MESSAGE value="-add AbstractModel class&#10;-modify LecteurModel and RayonModel to be suitable with AbstractModel" />
+    <option name="LAST_COMMIT_MESSAGE" value="-add AbstractModel class&#10;-modify LecteurModel and RayonModel to be suitable with AbstractModel" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

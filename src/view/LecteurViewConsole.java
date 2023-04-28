@@ -2,6 +2,7 @@ package view;
 
 import metier.Lecteur;
 import presenter.LecteurPresenter;
+import presenter.Presenter;
 
 import java.time.LocalDate;
 import java.util.*;
@@ -18,11 +19,13 @@ public class LecteurViewConsole implements ViewInterface
     {
         labels.addAll(Arrays.asList("nom","prenom","date de naissance","adresse","mail","tel"));
     }
+
+
     @Override
-    public void setPresenter(Object presenter)
-    {
+    public void setPresenter(Presenter presenter) {
         LecteurPresenter l=(LecteurPresenter) presenter;
         this.presenter = l;
+
     }
 
     @Override
@@ -30,7 +33,14 @@ public class LecteurViewConsole implements ViewInterface
     {
         this.llec = lecteurs;
         affListe(llec);
-        menu();
+        try
+        {
+            menu();
+        }catch (Exception e)
+        {
+            System.out.println(e.toString());
+        }
+
     }
 
     @Override
@@ -42,9 +52,16 @@ public class LecteurViewConsole implements ViewInterface
     @Override
     public void affList(List lex)
     {
+
         affListe(lex);
     }
-    public void menu()
+
+    @Override
+    public Object selectionner(List l) {
+        return null;
+    }
+
+    public void menu() throws Exception
     {
         List options = new ArrayList<>(Arrays.asList("ajouter", "retirer", "rechercher","modifier","special","fin"));
         do {
@@ -78,7 +95,7 @@ public class LecteurViewConsole implements ViewInterface
         presenter.search(idLecteur);
     }
 
-    private void modifier()
+    private void modifier() throws Exception
     {
         int choix = choixElt(llec);
         Lecteur l = llec.get(choix-1);
@@ -110,7 +127,7 @@ public class LecteurViewConsole implements ViewInterface
 
 
 
-    private void ajouter()
+    private void ajouter() throws Exception
     {
         String nom = CreateStringName(labels.get(0));
 
