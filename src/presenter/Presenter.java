@@ -4,24 +4,33 @@ package presenter;
 import model.DAO;
 import view.ViewInterface;
 
+import java.util.Comparator;
 import java.util.List;
 
 public abstract class Presenter<T> {
     protected DAO<T> model;
     protected ViewInterface<T> view;
 
-    public Presenter(DAO<T> model, ViewInterface<T> view) {
+    protected Comparator<T> cmp;
+
+    public Presenter(DAO<T> model, ViewInterface<T> view,Comparator<T> cmp) {
         this.model = model;
         this.view = view;
         this.view.setPresenter(this);
+        this.cmp=cmp;
     }
 
-    public void start() {
-        view.setListDatas(getAll());
+    public void start()
+    {
+        view.setListDatas(getAll(),cmp);
     }
 
-    public List<T> getAll(){
-        return model.getAll();
+    public List<T> getAll()
+    {
+        List<T> l = model.getAll();
+        l.sort(cmp);
+        return l;
+
     }
 
     public void add(T elt) {

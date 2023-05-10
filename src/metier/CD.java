@@ -9,7 +9,7 @@ public class CD extends Ouvrage{
     private byte nbrePlages;
     private LocalTime dureeTotale;
 
-    public CD(String titre, int ageMin, LocalDate dateParution, double prixLocation, String langue, String genre, long code, byte nbrePlages, LocalTime dureeTotale) {
+    public CD(String titre, int ageMin, LocalDate dateParution, double prixLocation, String langue, String genre, long code, byte nbrePlages, LocalTime dureeTotale) throws Exception {
         super(titre, ageMin, dateParution, TypeOuvrage.CD, prixLocation, langue, genre);
         this.code=code;
         this.nbrePlages=nbrePlages;
@@ -40,6 +40,11 @@ public class CD extends Ouvrage{
         this.dureeTotale = dureeTotale;
     }
 
+
+    public double amendeRetard(int njours) {
+
+        return super.amendeRetard(njours)*0.5;
+    }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

@@ -106,10 +106,26 @@ public class Ouvrage {
         return lex;
     }
 
+    public List<Exemplaire> getLex(boolean enLocation)
+    {
+        List<Exemplaire> lex2 = new ArrayList<>();
+        for(Exemplaire ex : lex){
+            if(ex.enLocation()==enLocation) lex2.add(ex);
+        }
+        return lex2;
+    }
+
+
+
+
     public void setLex(List<Exemplaire> lex) {
         this.lex = lex;
     }
 
+    public double amendeRetard(int njours) {
+
+        return njours;
+    }
     @Override
     public String toString() {
         return "metier.Ouvrage{" +
@@ -162,13 +178,7 @@ public class Ouvrage {
             genre = genre;
         }
 
-       /* public void setLauteurs(List<Auteur> lauteurs) {
-            this.lauteurs = lauteurs;
-        }
 
-        public void setLex(List<Exemplaire> lex) {
-            this.lex = lex;
-        }*/
         public static Ouvrage build()
         {
             if((titre!="")&&(dateParution!=null)&&(ageMin!=0)&&(dateParution!=null)&&(to!=null)&&(prixLocation!=0.0)&&(langue!="")&&(genre!=""))

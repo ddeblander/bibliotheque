@@ -13,7 +13,7 @@ public class DVD extends Ouvrage{
     private byte nbreBonus;
     private List<String> autresLangues=new ArrayList<>();
     private List<String> sousTitres=new ArrayList<>();
-    public DVD(String titre, int ageMin, LocalDate dateParution, double prixLocation, String langue, String genre, long code, LocalTime dureeTotale, byte nbreBonus) {
+    public DVD(String titre, int ageMin, LocalDate dateParution, double prixLocation, String langue, String genre, long code, LocalTime dureeTotale, byte nbreBonus) throws Exception {
         super(titre, ageMin, dateParution, TypeOuvrage.DVD, prixLocation, langue, genre);
         this.code=code;
        this.dureeTotale=dureeTotale;
@@ -65,6 +65,11 @@ public class DVD extends Ouvrage{
         this.sousTitres.addAll(sousTitres);
     }
 
+
+    public double amendeRetard(int njours) {
+
+        return super.amendeRetard(njours)*1.5;
+    }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
