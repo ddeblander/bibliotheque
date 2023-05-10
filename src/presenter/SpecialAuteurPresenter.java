@@ -1,7 +1,8 @@
 package presenter;
 
-import bibliotheque.metier.Auteur;
-import bibliotheque.metier.TypeLivre;
+
+import metier.Auteur;
+import metier.TypeLivre;
 
 public interface SpecialAuteurPresenter {
     void listerOuvrages(Auteur a);

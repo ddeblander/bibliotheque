@@ -1,6 +1,6 @@
 package presenter;
 
-import bibliotheque.metier.Rayon;
+import metier.Rayon;
 
 public interface SpecialRayonPresenter {
     void listerExemplaires(Rayon r);

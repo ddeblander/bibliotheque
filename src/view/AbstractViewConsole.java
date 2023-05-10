@@ -1,12 +1,9 @@
-package utilitaires;
+package view;
 
 import presenter.Presenter;
 import view.ViewInterface;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 import static utilitaires.Utilitaire.*;
 
@@ -22,8 +19,9 @@ public abstract class AbstractViewConsole<T> implements ViewInterface<T>
     }
 
     @Override
-    public void setListDatas(List<T> ldatas) {
+    public void setListDatas(List<T> ldatas, Comparator<T> cmp) {
         this.ldatas = ldatas;
+        this.ldatas.sort(cmp);
         affListe(ldatas);
         menu();
     }

@@ -1,11 +1,12 @@
 package presenter;
 
-import bibliotheque.metier.Exemplaire;
-import bibliotheque.metier.Lecteur;
-import bibliotheque.metier.Location;
-import bibliotheque.mvp.model.Speciallocation;
-import bibliotheque.mvp.view.ViewInterface;
+
+import metier.Exemplaire;
+import metier.Lecteur;
+import metier.Location;
 import model.DAO;
+import model.Speciallocation;
+import view.ViewInterface;
 
 import java.util.Comparator;
 

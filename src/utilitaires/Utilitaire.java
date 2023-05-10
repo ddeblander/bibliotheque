@@ -161,4 +161,19 @@ public class Utilitaire {
             }
 
     }
+
+    public static int lireInt(){
+        int n=0;
+        do{
+            try {
+                String ns = sc.nextLine();
+                n=Integer.parseInt(ns);
+                return n;
+            }
+            catch(NumberFormatException e){
+                System.out.println("valeur numérique incorrecte");
+            }
+
+        } while(true);
+    }
 }

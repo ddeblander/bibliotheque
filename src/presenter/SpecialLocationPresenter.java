@@ -1,8 +1,9 @@
 package presenter;
 
-import bibliotheque.metier.Exemplaire;
-import bibliotheque.metier.Lecteur;
-import bibliotheque.metier.Location;
+
+import metier.Exemplaire;
+import metier.Lecteur;
+import metier.Location;
 
 public interface SpecialLocationPresenter {
     void setExemplairePresenter(Presenter<Exemplaire> exemplairePresenter);

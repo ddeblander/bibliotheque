@@ -6,69 +6,33 @@ import model.DAO;
 import model.SpecialLecteur;
 import view.ViewInterface;
 
+import java.util.Comparator;
 import java.util.List;
 
-public class LecteurPresenter extends Presenter<Lecteur>
+public class LecteurPresenter extends Presenter<Lecteur> implements SpecialLecteurPresenter
 {
-    private DAO<Lecteur> model;
-    private ViewInterface view;
-
-    public LecteurPresenter(DAO<Lecteur> model, ViewInterface<Lecteur> view) {
-        super(model, view);
-    }
-
-    public void start() {
-        view.setListDatas(getAll());
-    }
-
-    public List<Lecteur> getAll(){
-        return model.getAll();
-    }
-
-    public void addLecteur(Lecteur lecteur) {
-        Lecteur lec = model.add(lecteur);
-        if(lec!=null) view.affMsg("création de :"+lec);
-        else view.affMsg("erreur de création");
-        List<Lecteur> lecteurs = model.getAll();
+    public LecteurPresenter(DAO<Lecteur> model, ViewInterface<Lecteur> view, Comparator<Lecteur>cmp) {
+        super(model,view,cmp);
     }
 
 
-    public void removeLecteur(Lecteur lecteur) {
-        boolean ok = model.remove(lecteur);
-        if(ok) view.affMsg("lecteur effacé");
-        else view.affMsg("lecteur non effacé");
-        List<Lecteur> lecteurs = model.getAll();
-
-    }
-    public void update(Lecteur lecteur) {
-        boolean l  =model.update(lecteur);
-        if(!l) view.affMsg("mise à jour infrucueuse");
-        else view.affMsg("mise à jour effectuée : "+lecteur);
-
-    }
-
-    public void search(int idLecteur) {
-        try
-        {
-            Lecteur l = model.read(new Lecteur(idLecteur,"search","search",null,"","",""));
-            if(l==null) view.affMsg("recherche infructueuse");
-            else view.affMsg(l.toString());
-        }catch (Exception e)
-        {
-            System.out.println(e.toString());
-        }
-
-
-    }
-
+    @Override
     public void exemplairesEnLocation(Lecteur l) {
         List<Exemplaire> lex =   ((SpecialLecteur)model).exemplairesEnLocation(l);
         if(lex==null || lex.isEmpty()) view.affMsg("aucun exemplaire trouvé");
         else view.affList(lex);
     }
+    @Override
     public void exemplairesLoues(Lecteur l) {
         List<Exemplaire> lex =   ((SpecialLecteur)model).exemplairesLoues(l);
         if(lex==null || lex.isEmpty()) view.affMsg("aucun exemplaire trouvé");
         else view.affList(lex);
+    }
+
+    @Override
+    public void lecParMail(String mail) {
+        Lecteur l = ((SpecialLecteur)model).lecParMail(mail);
+        if(l==null) view.affMsg("aucun lecteur pour ce mail");
+        else view.affMsg("lecteur trouvé :" +l);
     }
 }

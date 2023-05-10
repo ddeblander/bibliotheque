@@ -1,6 +1,6 @@
 package presenter;
 
-import bibliotheque.metier.Lecteur;
+import metier.Lecteur;
 
 public interface SpecialLecteurPresenter {
     void exemplairesEnLocation(Lecteur l);

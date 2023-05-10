@@ -1,6 +1,7 @@
 package gestion;
 
 import metier.*;
+import model.DAO;
 import model.LecteurModel;
 import presenter.LecteurPresenter;
 import utilitaires.*;
@@ -8,10 +9,7 @@ import view.LecteurViewConsole;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Gestion extends OuvrageFactory
 {
@@ -78,9 +76,10 @@ public class Gestion extends OuvrageFactory
     }
     private void gestLecteurs()
     {
+        Comparator<Lecteur> cmpl=(l1, l2)->l1.getNom().compareTo(l2.getNom());
         LecteurViewConsole lv = new LecteurViewConsole();
-        lv.setPresenter(new LecteurPresenter(new LecteurModel(),lv));
-        lv.setListDatas(llect);
+        lv.setPresenter(new LecteurPresenter(new LecteurModel(),lv,cmpl));
+        lv.setListDatas(llect,cmpl);
     }
     private void gestRayons()
     {

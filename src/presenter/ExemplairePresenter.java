@@ -1,15 +1,11 @@
 package presenter;
 
-import bibliotheque.metier.Exemplaire;
-import bibliotheque.metier.Lecteur;
-import bibliotheque.metier.Ouvrage;
-import bibliotheque.metier.Rayon;
-import bibliotheque.mvp.model.SpecialExemplaire;
-import bibliotheque.mvp.view.ViewInterface;
 import metier.Exemplaire;
+import metier.Lecteur;
 import metier.Ouvrage;
 import metier.Rayon;
 import model.DAO;
+import model.SpecialExemplaire;
 import view.ViewInterface;
 
 import java.util.Comparator;
@@ -27,76 +23,62 @@ public class ExemplairePresenter extends Presenter<Exemplaire> implements Specia
 
 
     @Override
-    public void setOuvragePresenter(Presenter<Ouvrage> ouvragePresenter){
-        this.ouvragePresenter=ouvragePresenter;
+    public void setOuvragePresenter(Presenter<Ouvrage> ouvragePresenter) {
+
     }
+
     @Override
     public void setRayonPresenter(Presenter<Rayon> rayonPresenter) {
-        this.rayonPresenter = rayonPresenter;
-    }
-    @Override
-    public Ouvrage choixOuvrage(){
-        return ouvragePresenter.selection();
+
     }
 
     @Override
-    public Rayon choixRayon(){
-        return rayonPresenter.selection();
+    public Ouvrage choixOuvrage() {
+        return null;
     }
-    @Override
-    public void modifierEtat(Exemplaire ex, String etat) {
-        ((SpecialExemplaire)model).modifierEtat(ex,etat);
-        view.affMsg("état modifié");
-    }
-
 
     @Override
-    public void LecteurActuel(Exemplaire ex) {
-        Lecteur l =((SpecialExemplaire)model).lecteurActuel(ex);
-        if(l!=null) view.affMsg(l.toString());
-        else view.affMsg("aucun lecteur actuel");
+    public Rayon choixRayon() {
+        return null;
     }
 
+    @Override
+    public void enLocation(Exemplaire ex) {
+
+    }
+
+    @Override
+    public void joursRetard(Exemplaire ex) {
+
+    }
+
+    @Override
+    public void enRetard(Exemplaire ex) {
+
+    }
+
+    @Override
+    public void envoiMailLecteurs(Exemplaire ex) {
+
+    }
+
+    @Override
+    public void envoiMailLecteurActuel(Exemplaire ex) {
+
+    }
 
     @Override
     public void lecteurs(Exemplaire ex) {
 
-       view.affList(((SpecialExemplaire)model).lecteurs(ex));
     }
 
-
     @Override
-    public void envoiMailLecteurActuel(Exemplaire ex) {
-        ((SpecialExemplaire)model).envoiMailLecteurActuel(ex);
-        view.affMsg("mail envoyé");
+    public void LecteurActuel(Exemplaire ex) {
 
     }
 
-
     @Override
-    public void envoiMailLecteurs(Exemplaire ex) {
-        ((SpecialExemplaire)model).envoiMailLecteurs(ex);
-        view.affMsg("mails envoyés");
+    public void modifierEtat(Exemplaire ex, String etat) {
 
-    }
-
-
-    @Override
-    public void enRetard(Exemplaire ex) {
-        boolean retard = ((SpecialExemplaire)model).enRetard(ex);
-        view.affMsg(retard?"en retard":"pas en retard");
-    }
-
-
-    @Override
-    public void joursRetard(Exemplaire ex) {
-        view.affMsg("jours de retard = "+((SpecialExemplaire)model).joursRetard(ex));
-    }
-
-
-    @Override
-    public void  enLocation(Exemplaire ex) {
-       boolean enLoc =  ((SpecialExemplaire)model).enLocation(ex);
-       view.affMsg(enLoc?"en location":"pas en location");
     }
 }

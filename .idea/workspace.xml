@@ -4,28 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="483450d0-41b9-46a6-bb09-c960a9aa3bf6" name="Changes" comment="-implements SpecialRayon">
-      <change afterPath="$PROJECT_DIR$/src/model/OuvrageModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/OuvragePresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/RayonPresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/SpecialAuteur.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/SpecialOuvrage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/presenter/AuteurPresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/presenter/ExemplairePresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/presenter/LocationPresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/presenter/SpecialAuteurPresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/presenter/SpecialExemplairePresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/presenter/SpecialLecteurPresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/presenter/SpecialLocationPresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/presenter/SpecialOuvragePresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/presenter/SpecialRayonPresenter.java" afterDir="false" />
+    <list default="true" id="483450d0-41b9-46a6-bb09-c960a9aa3bf6" name="Changes" comment="-to be completed">
+      <change afterPath="$PROJECT_DIR$/src/model/SpecialExemplaire.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Speciallocation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/SpecialLecteurViewConsole.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/metier/CD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metier/CD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/metier/DVD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metier/DVD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/metier/Ouvrage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metier/Ouvrage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/presenter/Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/presenter/Presenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utilitaires/CDFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilitaires/CDFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/ViewInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ViewInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gestion/Gestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gestion/Gestion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/LecteurModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/LecteurModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/SpecialLecteur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/SpecialLecteur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presenter/AuteurPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/presenter/AuteurPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presenter/ExemplairePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/presenter/ExemplairePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presenter/LecteurPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/presenter/LecteurPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presenter/LocationPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/presenter/LocationPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presenter/SpecialAuteurPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/presenter/SpecialAuteurPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presenter/SpecialExemplairePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/presenter/SpecialExemplairePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presenter/SpecialLecteurPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/presenter/SpecialLecteurPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presenter/SpecialLocationPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/presenter/SpecialLocationPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presenter/SpecialOuvragePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/presenter/SpecialOuvragePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presenter/SpecialRayonPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/presenter/SpecialRayonPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utilitaires/AbstractViewConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/AbstractViewConsole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utilitaires/Utilitaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilitaires/Utilitaire.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/LecteurViewConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/LecteurViewConsole.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +83,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="view" />
       <recent name="model" />
       <recent name="mvp.model.presenter" />
       <recent name="utilitaires" />
@@ -128,7 +128,7 @@
       <workItem from="1681982044218" duration="3381000" />
       <workItem from="1682584850857" duration="5632000" />
       <workItem from="1682670918805" duration="4840000" />
-      <workItem from="1683700237108" duration="1356000" />
+      <workItem from="1683700237108" duration="8435000" />
     </task>
     <task id="LOCAL-00001" summary="-first">
       <created>1675782602313</created>
@@ -277,7 +277,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682677316403</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="-to be completed">
+      <created>1683701624850</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1683701624850</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,7 +321,8 @@
     <MESSAGE value="-add AbstractModel class&#10;-modify LecteurModel and RayonModel to be suitable with AbstractModel" />
     <MESSAGE value="-create AbstractViewConsole, now needed to mod others ViewConsole to use this" />
     <MESSAGE value="-implements SpecialRayon" />
-    <option name="LAST_COMMIT_MESSAGE" value="-implements SpecialRayon" />
+    <MESSAGE value="-to be completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="-to be completed" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
